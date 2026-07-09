@@ -246,48 +246,62 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. GSAP Reveal Animations on Scroll
     gsap.registerPlugin(ScrollTrigger);
 
-    // Fade-in animations for section tags and headers
-    gsap.utils.toArray('.section-tag, .section-title, .section-subtitle').forEach(el => {
-        gsap.from(el, {
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none',
-            }
+    let mm = gsap.matchMedia();
+
+    // Desktop only scroll reveal animations (min-width: 769px)
+    mm.add("(min-width: 769px)", () => {
+        // Fade-in animations for section tags and headers
+        gsap.utils.toArray('.section-tag, .section-title, .section-subtitle').forEach(el => {
+            gsap.from(el, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                }
+            });
+        });
+
+        // Reveal for Pillar cards individually
+        gsap.utils.toArray('.pillar-card').forEach((card, index) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                delay: (index % 3) * 0.15, // Stagger cards in the same row
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        // Reveal portfolio project cards individually
+        gsap.utils.toArray('.project-card').forEach((card, index) => {
+            gsap.from(card, {
+                opacity: 0,
+                scale: 0.95,
+                y: 40,
+                duration: 0.8,
+                delay: (index % 2) * 0.12, // Stagger columns
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                }
+            });
         });
     });
 
-    // Reveal for Pillar cards individually
-    gsap.utils.toArray('.pillar-card').forEach((card, index) => {
-        gsap.from(card, {
-            opacity: 0,
-            y: 40,
-            duration: 0.8,
-            delay: (index % 3) * 0.15, // Stagger cards in the same row
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 88%',
-                toggleActions: 'play none none none'
-            }
-        });
-    });
-
-    // Reveal portfolio project cards individually
-    gsap.utils.toArray('.project-card').forEach((card, index) => {
-        gsap.from(card, {
-            opacity: 0,
-            scale: 0.95,
-            y: 40,
-            duration: 0.8,
-            delay: (index % 2) * 0.12, // Stagger columns
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 88%',
-                toggleActions: 'play none none none'
-            }
+    // Mobile / Tablet: show instantly without scroll delay to avoid rendering lag
+    mm.add("(max-width: 768px)", () => {
+        gsap.set('.section-tag, .section-title, .section-subtitle, .pillar-card, .project-card', {
+            opacity: 1,
+            y: 0,
+            scale: 1
         });
     });
 
