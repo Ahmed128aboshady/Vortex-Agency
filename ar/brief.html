@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابدأ مشروعك | Vortex Creative Studio</title>
+    <meta name="description" content="قم بإنشاء بريف مشروعك الإبداعي الآن مع Vortex عبر نموذجنا التفاعلي الذكي واحصل على تقديرات فنية أولية ومكالمة إستراتيجية مجانية.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link ">الرئيسية</a>
+                <a href="services.html" class="nav-link ">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link ">معرض الأعمال</a>
+                <a href="team.html" class="nav-link ">الفريق</a>
+                <a href="about.html" class="nav-link ">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="../brief.html" class="lang-switch">EN</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="brief-container">
+        <div class="container">
+            <div class="brief-card">
+                
+                <!-- Steps Indicators -->
+                <div class="brief-steps-indicator" id="stepsIndicator">
+                    <div class="step-indicator-node active" data-step="1">١</div>
+                    <div class="step-indicator-node" data-step="2">٢</div>
+                    <div class="step-indicator-node" data-step="3">٣</div>
+                    <div class="step-indicator-node" data-step="4">٤</div>
+                </div>
+
+                <!-- FORM SYSTEM -->
+                <form id="interactiveBriefForm">
+                    
+                    <!-- STEP 1: Select Services -->
+                    <div class="brief-step-content active" data-step="1">
+                        <h2 class="brief-step-title">ما هي الخدمات التي يحتاجها عملك الفاخر؟</h2>
+                        <div class="brief-options-grid">
+                            <div class="brief-option-card" data-value="جرافيك ديزاين وهويات">
+                                <i class="fa-solid fa-pen-nib"></i>
+                                <h3>جرافيك وهويات بصرية</h3>
+                                <p>تصاميم منصات، هويات تجارية، تصميم معارض وعبوات.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="تسويق وإدارة حملات">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <h3>تسويق رقمي وإعلانات</h3>
+                                <p>إدارة حسابات، حملات إعلانية مدفوعة، وبناء مواقع.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="صناعة فيديوهات بالـ AI">
+                                <i class="fa-solid fa-robot"></i>
+                                <h3>فيديوهات وذكاء اصطناعي</h3>
+                                <p>إنتاج مرئي سينمائي، مونتاج وتوليد بالذكاء الاصطناعي.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="حلول إبداعية متكاملة">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <h3>حلول إبداعية متكاملة</h3>
+                                <p>كل ما سبق لبناء حضور براند مكتمل يكتسح السوق.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Budget Slider -->
+                    <div class="brief-step-content" data-step="2">
+                        <h2 class="brief-step-title">ما هو المدى التقريبي لميزانية مشروعك؟</h2>
+                        <div class="budget-slider-container">
+                            <div class="budget-value-display">
+                                <span id="budgetValue">١٠,٠٠٠</span> دولار أمريكي
+                            </div>
+                            <input type="range" class="budget-slider" id="budgetRange" min="2000" max="50000" step="1000" value="10000">
+                            <p style="text-align: center; color: var(--text-gray); margin-top: 1rem; font-size: 0.95rem;">
+                                الميزانيات المرتفعة تضمن استخدام تقنيات ثلاثية أبعاد متقدمة وإنتاج سينمائي مخصص.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Brand Description -->
+                    <div class="brief-step-content" data-step="3">
+                        <h2 class="brief-step-title">أخبرنا أكثر عن رؤيتك وأهدافك</h2>
+                        <div class="brief-form-group">
+                            <label for="brandDescription" class="brief-label">اكتب لمحة سريعة عن براندك وفكرة المشروع</label>
+                            <textarea id="brandDescription" class="brief-textarea" placeholder="مثال: نحن شركة تطوير عقاري في التجمع الخامس، نسعى لإطلاق هوية بصرية فاخرة لمشروعنا الجديد في الساحل الشمالي مع إعلانات رقمية مميزة..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Contact Details -->
+                    <div class="brief-step-content" data-step="4">
+                        <h2 class="brief-step-title">كيف يمكننا التواصل مع شخصكم الكريم؟</h2>
+                        <div class="brief-form-group">
+                            <label for="clientName" class="brief-label">الاسم الكامل</label>
+                            <input type="text" id="clientName" class="brief-input" required placeholder="أحمد الرشيدي">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientCompany" class="brief-label">اسم الشركة / البراند</label>
+                            <input type="text" id="clientCompany" class="brief-input" placeholder="شركة الفهد القابضة">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientPhone" class="brief-label">رقم الهاتف (يفضل واتساب)</label>
+                            <input type="tel" id="clientPhone" class="brief-input" required placeholder="+20 100 123 4567">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientEmail" class="brief-label">البريد الإلكتروني</label>
+                            <input type="email" id="clientEmail" class="brief-input" required placeholder="name@company.com">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="commChannel" class="brief-label">وسيلة التواصل المفضلة</label>
+                            <select id="commChannel" class="brief-input">
+                                <option value="WhatsApp">واتساب (WhatsApp)</option>
+                                <option value="Phone Call">مكالمة هاتفية مباشرة</option>
+                                <option value="Email">البريد الإلكتروني</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="brief-actions">
+                        <button type="button" class="brief-btn brief-btn-prev" id="prevBtn" style="visibility: hidden;">السابق</button>
+                        <button type="button" class="brief-btn brief-btn-next" id="nextBtn">التالي <i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                </form>
+
+                <!-- Success State Overlay -->
+                <div id="briefSuccessOverlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-dark-card); z-index: 10; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3rem;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--text-white); margin-bottom: 2rem; box-shadow: var(--glow-purple);">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h2 class="section-title">لقد أرسلت البريف <span>بنجاح!</span></h2>
+                    <p style="color: var(--text-gray); max-width: 500px; margin-bottom: 2.5rem; font-size: 1.1rem;">
+                        يسعدنا جداً اهتمامكم بوكالة Vortex. يمكنك إرسال هذا البريف مباشرة لمدير العلاقات الفاخرة عبر الواتساب لتسريع دراسة مشروعك والحصول على الرد خلال دقائق.
+                    </p>
+                    <a href="#" id="whatsappSendBtn" target="_blank" class="btn-magnetic" style="background: #25D366; box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);">
+                        إرسال عبر واتساب الفوري <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">
+                        نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تخصصاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">سوشيال ديزاين وهويات</a></li>
+                        <li><a href="services.html#marketing">تسويق وإعلانات رقمية</a></li>
+                        <li><a href="services.html#video">صناعة فيديو وذكاء اصطناعي</a></li>
+                        <li><a href="services.html#graphic">تصميم عبوات ومعارض</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+20 100 123 4567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@vortexstudio.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>التجمع الخامس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+                <p>صنع بكل حب بتصاميم سينور جرافيكس.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="../main.js?v=1.0.2"></script>

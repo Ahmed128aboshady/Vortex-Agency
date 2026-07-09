@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال | Vortex Creative Studio</title>
+    <meta name="description" content="تصفح معرض أعمال شركة Vortex المميز واستلهم من تصاميم الهويات التجارية الفاخرة، الحملات التسويقية الناجحة، وتصاميم المعارض المبتكرة، ومقاطع الفيديو المنتجة بالذكاء الاصطناعي.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link ">الرئيسية</a>
+                <a href="services.html" class="nav-link ">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link active">معرض الأعمال</a>
+                <a href="team.html" class="nav-link ">الفريق</a>
+                <a href="about.html" class="nav-link ">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="../portfolio.html" class="lang-switch">EN</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="section-tag">روائع بصرية</span>
+                <h1 class="section-title">معرضنا <span>الإبداعي</span></h1>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                    مجموعة مختارة بعناية من أفضل أعمالنا في تصميم الهويات الفاخرة، هندسة أجنحة المعارض، وتطوير المنصات الرقمية لشركائنا في الوطن العربي.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Grid -->
+    <section class="portfolio-works">
+        <div class="container">
+            <!-- Filters System -->
+            <div class="filters-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;">
+                <div class="portfolio-filters categories-filters">
+                    <button class="filter-btn active" data-category-filter="all">جميع الأعمال</button>
+                    <button class="filter-btn" data-category-filter="identity">الهويات والتصميم</button>
+                    <button class="filter-btn" data-category-filter="web-dev">المواقع الإلكترونية</button>
+                    <button class="filter-btn" data-category-filter="app-dev">تطبيقات الجوال</button>
+                    <button class="filter-btn" data-category-filter="campaigns">الحملات الإعلانية</button>
+                    <button class="filter-btn" data-category-filter="exhibitions">المعارض والديكور</button>
+                </div>
+                <div class="designer-dropdown-container">
+                    <div class="designer-dropdown-trigger" id="designerDropdownTrigger">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span class="selected-designer" id="selectedDesignerName">جميع الموظفين</span>
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="designer-dropdown-menu" id="designerDropdownMenu">
+                        <div class="dropdown-item active" data-designer-filter="all">جميع الموظفين</div>
+                        <div class="dropdown-item" data-designer-filter="shady">أحمد أبو شادي</div>
+                        <div class="dropdown-item" data-designer-filter="saeed">سعيد علي</div>
+                        <div class="dropdown-item" data-designer-filter="yara">يارا خميس</div>
+                        <div class="dropdown-item" data-designer-filter="ahmed">أحمد نصر</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-works-grid" id="portfolioGrid">
+                <!-- Project: فايف هيلز (Five Hills) - للتسويق العقاري -->
+                <a href="https://ahmed128aboshady.github.io/five-hills/contact.html" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="فايف هيلز (Five Hills) - للتسويق العقاري" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | منصة تسويق عقاري</span>
+                            <h3 class="project-title">فايف هيلز (Five Hills) - للتسويق العقاري</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: متجر جيوب (Juyub) - للمنتجات الجلدية والأزياء -->
+                <a href="https://juyub.com/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="متجر جيوب (Juyub) - للمنتجات الجلدية والأزياء" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | متجر إلكتروني متكامل</span>
+                            <h3 class="project-title">متجر جيوب (Juyub) - للمنتجات الجلدية والأزياء</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: فاني باني (Funny Bunny) - متجر ألعاب أطفال -->
+                <a href="https://ahmed128aboshady.github.io/funny-bunny-store/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="فاني باني (Funny Bunny) - متجر ألعاب أطفال" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | متجر بيع ألعاب أطفال</span>
+                            <h3 class="project-title">فاني باني (Funny Bunny) - متجر ألعاب أطفال</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: شركة 3M للتسويق - موقع بورتفوليو رسمي -->
+                <a href="https://ahmed128aboshady.github.io/3m.Marketing-company/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="شركة 3M للتسويق - موقع بورتفوليو رسمي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | بورتفوليو شركات تسويق</span>
+                            <h3 class="project-title">شركة 3M للتسويق - موقع بورتفوليو رسمي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: سماكس (SmartEx) - لاندنج بيج ذكية -->
+                <a href="https://ahmed128aboshady.github.io/smartexeg/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="سماكس (SmartEx) - لاندنج بيج ذكية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | صفحة هبوط تقنية</span>
+                            <h3 class="project-title">سماكس (SmartEx) - لاندنج بيج ذكية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: كلود أكاديمي (Claude Academy) - لاندنج بيج تعليمية -->
+                <a href="https://ahmed128aboshady.github.io/Claude-Academy-Team/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="كلود أكاديمي (Claude Academy) - لاندنج بيج تعليمية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | صفحة هبوط تعليمية</span>
+                            <h3 class="project-title">كلود أكاديمي (Claude Academy) - لاندنج بيج تعليمية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: كنافي (Knafi) - موقع محل حلويات تراثي -->
+                <a href="https://ahmed128aboshady.github.io/Knafi/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="كنافي (Knafi) - موقع محل حلويات تراثي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | موقع مطاعم وتجزئة أغذية</span>
+                            <h3 class="project-title">كنافي (Knafi) - موقع محل حلويات تراثي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: مطعم إسكندرية (Eskandria) - موقع مطعم فاخر -->
+                <a href="https://ahmed128aboshady.github.io/Eskandria/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="مطعم إسكندرية (Eskandria) - موقع مطعم فاخر" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطوير المواقع | موقع حجز وطلب طعام فاخر</span>
+                            <h3 class="project-title">مطعم إسكندرية (Eskandria) - موقع مطعم فاخر</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تطبيق Velo الذكي للياقة البدنية (iOS) -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-1">
+                    <img src="img/apps/velo.png" alt="تطبيق Velo الذكي للياقة البدنية (iOS)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطبيقات الموبايل | تطبيق صحة ورياضة iOS</span>
+                            <h3 class="project-title">تطبيق Velo الذكي للياقة البدنية (iOS)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تطبيق Luxora لبيع المجوهرات الفاخرة -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-2">
+                    <img src="img/apps/luxora.png" alt="تطبيق Luxora لبيع المجوهرات الفاخرة" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطبيقات الموبايل | متجر مجوهرات أندرويد</span>
+                            <h3 class="project-title">تطبيق Luxora لبيع المجوهرات الفاخرة</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تطبيق DineOut لطلب الطعام وحجز الطاولات -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-3">
+                    <img src="img/apps/dineout.png" alt="تطبيق DineOut لطلب الطعام وحجز الطاولات" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تطبيقات الموبايل | تطبيق طلب طعام هجين</span>
+                            <h3 class="project-title">تطبيق DineOut لطلب الطعام وحجز الطاولات</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> تطوير: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: حملة فيروسية لشركة تنظيم معارض وتصميم داخلي -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-5">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="حملة فيروسية لشركة تنظيم معارض وتصميم داخلي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الحملات الرقمية والإعلانات | انتشار فيروسي</span>
+                            <h3 class="project-title">حملة فيروسية لشركة تنظيم معارض وتصميم داخلي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> إدارة: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: حملة تسويق B2B لشريك أودو الفضي -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-4">
+                    <img src="../img/insights/odoo-silver.png" alt="حملة تسويق B2B لشريك أودو الفضي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الحملات الرقمية والإعلانات | وصول B2B</span>
+                            <h3 class="project-title">حملة تسويق B2B لشريك أودو الفضي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> إدارة: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+
+                
+
+                <!-- Project: حملة إطلاق محتوى تعليمي (+1,664% نمو) -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-1">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="حملة إطلاق محتوى تعليمي (+1,664% نمو)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الحملات الرقمية والإعلانات | نمو الاشتراكات</span>
+                            <h3 class="project-title">حملة إطلاق محتوى تعليمي (+1,664% نمو)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> إدارة: أحمد أبو شادي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: [APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025 -->
+                <a href="https://www.behance.net/gallery/249085223/APPROVED-DUBAIMUNICIPALITY-DUBAI-FUTURE-LABS2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/1acaaa249085223.Y3JvcCw5NzcsNzY0LDU4LDQ.jpg" alt="[APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">[APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: معرض الصحة العالمية EHS 2025 -->
+                <a href="https://www.behance.net/gallery/248271759/EHS-WHX-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a07123248271759.Y3JvcCwxMDA2LDc4NywxMzEsMA.jpg" alt="معرض الصحة العالمية EHS 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">معرض الصحة العالمية EHS 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: موانئ دبي العالمية - معرض رؤية للوظائف 2025 -->
+                <a href="https://www.behance.net/gallery/243758971/DP-WORLD-Ruya-Careers-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/994313243758971.Y3JvcCwxMDA2LDc4NywxMDksMA.jpg" alt="موانئ دبي العالمية - معرض رؤية للوظائف 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">موانئ دبي العالمية - معرض رؤية للوظائف 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: وزارة الصحة ووقاية المجتمع - شهر الابتكار 2025 -->
+                <a href="https://www.behance.net/gallery/240700883/MOHAP-UAE-Innovation-Month-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6b30ca240700883.Y3JvcCwxMDA2LDc4Nyw3Miww.jpg" alt="وزارة الصحة ووقاية المجتمع - شهر الابتكار 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">وزارة الصحة ووقاية المجتمع - شهر الابتكار 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: حملة VI MARKETS الإعلانية للسوشيال ميديا 2025 -->
+                <a href="https://www.behance.net/gallery/239768183/VI-MARKETS-Social-Media-Campagin-2025" target="_blank" class="project-card" data-category="campaigns" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/19ee21239768183.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="حملة VI MARKETS الإعلانية للسوشيال ميديا 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الحملات الرقمية والإعلانات</span>
+                            <h3 class="project-title">حملة VI MARKETS الإعلانية للسوشيال ميديا 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصاميم حملات السوشيال ميديا -->
+                <a href="https://www.behance.net/gallery/133632709/Social-media" target="_blank" class="project-card" data-category="campaigns" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ff1400133632709.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="تصاميم حملات السوشيال ميديا" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الحملات الرقمية والإعلانات</span>
+                            <h3 class="project-title">تصاميم حملات السوشيال ميديا</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: أكاديمية الحلم الوطني -->
+                <a href="https://www.behance.net/gallery/78722017/National-Dream-Academy" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/df4b8a78722017.Y3JvcCwxMzIzLDEwMzUsMjk4LDIy.png" alt="أكاديمية الحلم الوطني" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">أكاديمية الحلم الوطني</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: أتيليه Seventy Five -->
+                <a href="https://www.behance.net/gallery/78297099/Seventy-five-atelier" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/770e2478297099.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="أتيليه Seventy Five" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">أتيليه Seventy Five</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: لوجو معارض الكلمة الدولية -->
+                <a href="https://www.behance.net/gallery/169129833/Alkalema-Exhibitions-Logo" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/45b845169129833.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="لوجو معارض الكلمة الدولية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">لوجو معارض الكلمة الدولية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: بيور هيلث - التكنولوجيا الصحية القمة العالمية -->
+                <a href="https://www.behance.net/gallery/236865877/Pure-Health-WHX-Tech" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8cc9ba236865877.Y3JvcCwxNzk4LDE0MDcsNDMxLDA.jpg" alt="بيور هيلث - التكنولوجيا الصحية القمة العالمية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">بيور هيلث - التكنولوجيا الصحية القمة العالمية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: شرطة دبي - معرض إكسبو لأصحاب الهمم -->
+                <a href="https://www.behance.net/gallery/228193313/-Dubai-Police-Accessibilities-Expo" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b47b26228193313.Y3JvcCwxODA0LDE0MTEsNzM3LDEz.jpg" alt="شرطة دبي - معرض إكسبو لأصحاب الهمم" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">شرطة دبي - معرض إكسبو لأصحاب الهمم</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: سعيد علي</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم عبوات معلبات Consul -->
+                <a href="https://www.behance.net/gallery/242102635/Consul-Canned-Food" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/325d95242102635.Y3JvcCwxNDAxLDEwOTYsMCww.jpg" alt="تصميم عبوات معلبات Consul" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تصميم عبوات معلبات Consul</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم عبوات مربى Mixly الفاخرة -->
+                <a href="https://www.behance.net/gallery/239839701/Mixly-Jam-Packaging-Design" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6c6ee8239839701.Y3JvcCwxMjAwLDkzOCwwLDEzMA.jpg" alt="تصميم عبوات مربى Mixly الفاخرة" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تصميم عبوات مربى Mixly الفاخرة</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تغليف وتعبئة تمور الأمير الفاخرة -->
+                <a href="https://www.behance.net/gallery/179167819/Al-Amir-Dates-Packaging-Design" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ae3cfe179167819.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="تغليف وتعبئة تمور الأمير الفاخرة" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تغليف وتعبئة تمور الأمير الفاخرة</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم عبوات معمول هنا التراثي -->
+                <a href="https://www.behance.net/gallery/198918857/Hana-Maamoul" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/dadd06198918857.Y3JvcCwxNjQ4LDEyODksMjYxLDc4Mw.jpg" alt="تصميم عبوات معمول هنا التراثي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تصميم عبوات معمول هنا التراثي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم عبوة بسكويت الشاي Sano -->
+                <a href="https://www.behance.net/gallery/206858825/Sano-Tea-Biscuit" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f9b8c8206858825.Y3JvcCwxMjAwLDkzOCwwLDEzMA.jpg" alt="تصميم عبوة بسكويت الشاي Sano" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تصميم عبوة بسكويت الشاي Sano</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم عبوات شوكولاتة Dazzel الفاخرة -->
+                <a href="https://www.behance.net/gallery/150031419/Dazzel-Chocolate" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b24e17150031419.Y3JvcCw5MDcsNzA5LDQ4OSw0OTg.jpg" alt="تصميم عبوات شوكولاتة Dazzel الفاخرة" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج</span>
+                            <h3 class="project-title">تصميم عبوات شوكولاتة Dazzel الفاخرة</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: المؤتمر العالمي للمرافق TII 2025 -->
+                <a href="https://www.behance.net/gallery/227095985/TII-WORLD-UTILITIES-CONGRESS-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bc3885227095985.68555de6dcc96.png" alt="المؤتمر العالمي للمرافق TII 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">المؤتمر العالمي للمرافق TII 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم مساحة حفل التفتيش السنوي لشرطة دبي -->
+                <a href="https://www.behance.net/gallery/228433599/Approved-Dubai-Police-Annual-Inspection-Event" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8e77c1228433599.Y3JvcCw2MjIsNDg2LDU3NiwxMzc.jpg" alt="تصميم مساحة حفل التفتيش السنوي لشرطة دبي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">تصميم مساحة حفل التفتيش السنوي لشرطة دبي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: اليوم الوطني للمنطقة الحرة بمطار دبي DAFZA 2025 -->
+                <a href="https://www.behance.net/gallery/239694799/DAFZA-National-Day-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/67c86d239694799.Y3JvcCwxMDA2LDc4NywxOTksMA.jpg" alt="اليوم الوطني للمنطقة الحرة بمطار دبي DAFZA 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">تصميم المعارض والمساحات</span>
+                            <h3 class="project-title">اليوم الوطني للمنطقة الحرة بمطار دبي DAFZA 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: يارا خميس</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: الهوية البصرية الكاملة لشركة جيوب (Juyub) -->
+                <a href="https://www.behance.net/gallery/249886331/-Juyub" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4a5728249886331.Y3JvcCw5NDEsNzM2LDIyMywzMA.jpeg" alt="الهوية البصرية الكاملة لشركة جيوب (Juyub)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: جيوب</span>
+                            <h3 class="project-title">الهوية البصرية الكاملة لشركة جيوب (Juyub)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم الهوية البصرية لبراند منير (Mounir) -->
+                <a href="https://www.behance.net/gallery/249236973/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7c2057249236973.Y3JvcCw0MzE2LDMzNzUsMCwyMTM.png" alt="تصميم الهوية البصرية لبراند منير (Mounir)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: منير</span>
+                            <h3 class="project-title">تصميم الهوية البصرية لبراند منير (Mounir)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: مونتاج وإخراج فيديوهات تجارية سينمائية -->
+                <a href="https://www.behance.net/gallery/249086647/Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e696de249086647.Y3JvcCwxNDE3LDExMDgsMCww.png" alt="مونتاج وإخراج فيديوهات تجارية سينمائية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الذكاء الاصطناعي وإنتاج الفيديو | عملاء تجاريون متعددون</span>
+                            <h3 class="project-title">مونتاج وإخراج فيديوهات تجارية سينمائية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: إنتاج فيديو كليبات بالذكاء الاصطناعي التوليدي -->
+                <a href="https://www.behance.net/gallery/249085169/AI-Music-Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a98f21249085169.Y3JvcCwxNDE3LDExMDksMCww.png" alt="إنتاج فيديو كليبات بالذكاء الاصطناعي التوليدي" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الذكاء الاصطناعي وإنتاج الفيديو | فيديو كليبات بالذكاء الاصطناعي</span>
+                            <h3 class="project-title">إنتاج فيديو كليبات بالذكاء الاصطناعي التوليدي</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: إخراج وإنتاج كليبات موسيقية سينمائية -->
+                <a href="https://www.behance.net/gallery/249084237/Music-Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7fd4e5249084237.Y3JvcCwxNDE3LDExMDgsMCww.png" alt="إخراج وإنتاج كليبات موسيقية سينمائية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الذكاء الاصطناعي وإنتاج الفيديو | فيديو كليبات سينمائية</span>
+                            <h3 class="project-title">إخراج وإنتاج كليبات موسيقية سينمائية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم هوية العلامة التجارية UMI Group II -->
+                <a href="https://www.behance.net/gallery/249083281/UMI-Group-II" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c10874249083281.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="تصميم هوية العلامة التجارية UMI Group II" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: مجموعة UMI</span>
+                            <h3 class="project-title">تصميم هوية العلامة التجارية UMI Group II</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم الهوية البصرية لمجموعة UMI -->
+                <a href="https://www.behance.net/gallery/235200747/UMI-Group" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d50382235200747.Y3JvcCwxMDIyLDgwMCw4OCww.png" alt="تصميم الهوية البصرية لمجموعة UMI" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: مجموعة UMI</span>
+                            <h3 class="project-title">تصميم الهوية البصرية لمجموعة UMI</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: الهوية البصرية وتغليف براند سناريكا (Sanarika) -->
+                <a href="https://www.behance.net/gallery/234831025/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/44b315234831025.Y3JvcCwxNDAwLDEwOTUsMCwxNTMx.png" alt="الهوية البصرية وتغليف براند سناريكا (Sanarika)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: سناريكا</span>
+                            <h3 class="project-title">الهوية البصرية وتغليف براند سناريكا (Sanarika)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: بورتفوليو ومعرض أعمال نصر 2025 -->
+                <a href="https://www.behance.net/gallery/228453433/My-Portfolio-2025" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/58c80c228453433.Y3JvcCwxNjE3LDEyNjUsMzE2LDA.png" alt="بورتفوليو ومعرض أعمال نصر 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | هوية شخصية</span>
+                            <h3 class="project-title">بورتفوليو ومعرض أعمال نصر 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم أغطية وسلسلة كتب The Bloom -->
+                <a href="https://www.behance.net/gallery/230902589/The-Bloom-Books-Cover" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f6129c230902589.Y3JvcCwxNDAwLDEwOTUsMCwzNA.png" alt="تصميم أغطية وسلسلة كتب The Bloom" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: The Bloom</span>
+                            <h3 class="project-title">تصميم أغطية وسلسلة كتب The Bloom</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: تصميم الهوية البصرية والتعليمية لمؤسسات التعليم -->
+                <a href="https://www.behance.net/gallery/210905147/Education" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7973bd210905147.Y3JvcCwxMDgwLDg0NCwwLDI0.png" alt="تصميم الهوية البصرية والتعليمية لمؤسسات التعليم" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | شركاء قطاع التعليم</span>
+                            <h3 class="project-title">تصميم الهوية البصرية والتعليمية لمؤسسات التعليم</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: الهوية البصرية لبراند أبو هندية (Abu Hendia) -->
+                <a href="https://www.behance.net/gallery/144733723/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/5e4225144733723.Y3JvcCwxMDgwLDg0NCwwLDEw.png" alt="الهوية البصرية لبراند أبو هندية (Abu Hendia)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">الهوية البصرية والبراندنج | العميل: أبو هندية</span>
+                            <h3 class="project-title">الهوية البصرية لبراند أبو هندية (Abu Hendia)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> تصميم: أحمد نصر</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">
+                        نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تخصصاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">سوشيال ديزاين وهويات</a></li>
+                        <li><a href="services.html#marketing">تسويق وإعلانات رقمية</a></li>
+                        <li><a href="services.html#video">صناعة فيديو وذكاء اصطناعي</a></li>
+                        <li><a href="services.html#graphic">تصميم عبوات ومعارض</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+20 100 123 4567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@vortexstudio.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>التجمع الخامس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+                <p>صنع بكل حب بتصاميم سينور جرافيكس.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="../main.js"></script>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Vortex Creative Studio</title>
+    <meta name="description" content="Browse Vortex's high-end portfolio featuring luxury brand identities, exhibition space blueprints, and cinematic generative AI video creation.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="about.html" class="nav-link">Agency</a>
+                <a href="brief.html" class="nav-cta">Start Project</a>
+            </nav>
+            <div class="header-actions">
+                <a href="ar/portfolio.html" class="lang-switch">AR</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="section-tag">Visual Masterpieces</span>
+                <h1 class="section-title">The Creative <span>Showcase</span></h1>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                    A curated selection of our finest work for real estate groups, luxury fashion brands, and leading corporate enterprises in the Middle East.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Grid -->
+    <section class="portfolio-works">
+        <div class="container">
+            <!-- Filters System -->
+            <div class="filters-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;">
+                <div class="portfolio-filters categories-filters">
+                    <button class="filter-btn active" data-category-filter="all">All Works</button>
+                    <button class="filter-btn" data-category-filter="identity">Branding &amp; Graphic</button>
+                    <button class="filter-btn" data-category-filter="web-dev">Websites</button>
+                    <button class="filter-btn" data-category-filter="app-dev">Mobile Apps</button>
+                    <button class="filter-btn" data-category-filter="campaigns">Campaigns</button>
+                    <button class="filter-btn" data-category-filter="exhibitions">Exhibitions &amp; Blueprints</button>
+                </div>
+                <div class="designer-dropdown-container">
+                    <div class="designer-dropdown-trigger" id="designerDropdownTrigger">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span class="selected-designer" id="selectedDesignerName">All Employee</span>
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="designer-dropdown-menu" id="designerDropdownMenu">
+                        <div class="dropdown-item active" data-designer-filter="all">All Employee</div>
+                        <div class="dropdown-item" data-designer-filter="shady">Ahmed Abo Shady</div>
+                        <div class="dropdown-item" data-designer-filter="saeed">Saeed Ali</div>
+                        <div class="dropdown-item" data-designer-filter="yara">Yara Khamis</div>
+                        <div class="dropdown-item" data-designer-filter="ahmed">Ahmed Nasr</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-works-grid" id="portfolioGrid">
+                <!-- Project: Five Hills - Real Estate Platform -->
+                <a href="https://ahmed128aboshady.github.io/five-hills/contact.html" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Five Hills - Real Estate Platform" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | Real Estate Website</span>
+                            <h3 class="project-title">Five Hills - Real Estate Platform</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Juyub - Leather E-Commerce Store -->
+                <a href="https://juyub.com/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="Juyub - Leather E-Commerce Store" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | E-Commerce Store</span>
+                            <h3 class="project-title">Juyub - Leather E-Commerce Store</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Funny Bunny - Stuffed Toy Store -->
+                <a href="https://ahmed128aboshady.github.io/funny-bunny-store/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Funny Bunny - Stuffed Toy Store" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | E-Commerce Toy Shop</span>
+                            <h3 class="project-title">Funny Bunny - Stuffed Toy Store</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: 3M Marketing - Portfolio Website -->
+                <a href="https://ahmed128aboshady.github.io/3m.Marketing-company/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="3M Marketing - Portfolio Website" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | Corporate Portfolio</span>
+                            <h3 class="project-title">3M Marketing - Portfolio Website</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: SmartEx - Technology Landing Page -->
+                <a href="https://ahmed128aboshady.github.io/smartexeg/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="SmartEx - Technology Landing Page" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | SaaS Landing Page</span>
+                            <h3 class="project-title">SmartEx - Technology Landing Page</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Claude Academy Portal -->
+                <a href="https://ahmed128aboshady.github.io/Claude-Academy-Team/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Claude Academy Portal" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | Academy Landing Page</span>
+                            <h3 class="project-title">Claude Academy Portal</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Knafi - Authentic Sweet Shop Site -->
+                <a href="https://ahmed128aboshady.github.io/Knafi/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Knafi - Authentic Sweet Shop Site" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | Food & Retail Website</span>
+                            <h3 class="project-title">Knafi - Authentic Sweet Shop Site</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Eskandria - Premium Restaurant Site -->
+                <a href="https://ahmed128aboshady.github.io/Eskandria/" target="_blank" class="project-card" data-category="web-dev" data-designer="shady">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Eskandria - Premium Restaurant Site" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Web Development | Restaurant Website</span>
+                            <h3 class="project-title">Eskandria - Premium Restaurant Site</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Velo - Smart Fitness iOS App -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-1">
+                    <img src="img/apps/velo.png" alt="Velo - Smart Fitness iOS App" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Mobile Apps | iOS Health & Fitness</span>
+                            <h3 class="project-title">Velo - Smart Fitness iOS App</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Luxora - Luxury Jewelry Store App -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-2">
+                    <img src="img/apps/luxora.png" alt="Luxora - Luxury Jewelry Store App" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Mobile Apps | Android E-Commerce Catalog</span>
+                            <h3 class="project-title">Luxora - Luxury Jewelry Store App</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: DineOut - Smart Food Delivery App -->
+                <a href="#" class="project-card" data-category="app-dev" data-designer="shady" data-case-study="app-3">
+                    <img src="img/apps/dineout.png" alt="DineOut - Smart Food Delivery App" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Mobile Apps | Cross-Platform App</span>
+                            <h3 class="project-title">DineOut - Smart Food Delivery App</h3>
+                            <span class="project-designer"><i class="fa-solid fa-code"></i> Developed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Viral Campaign - Exhibition & Interior Group -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-5">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Viral Campaign - Exhibition & Interior Group" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Digital Campaigns & Ads | Viral Reach</span>
+                            <h3 class="project-title">Viral Campaign - Exhibition & Interior Group</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> Managed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: B2B Campaign - Odoo Silver Partner -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-4">
+                    <img src="img/insights/odoo-silver.png" alt="B2B Campaign - Odoo Silver Partner" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Digital Campaigns & Ads | B2B Reach</span>
+                            <h3 class="project-title">B2B Campaign - Odoo Silver Partner</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> Managed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+
+                
+
+                <!-- Project: Educational Reel Campaign (+1,664% Growth) -->
+                <a href="#" class="project-card" data-category="campaigns" data-designer="shady" data-case-study="campaign-1">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Educational Reel Campaign (+1,664% Growth)" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Digital Campaigns & Ads | Education Boost</span>
+                            <h3 class="project-title">Educational Reel Campaign (+1,664% Growth)</h3>
+                            <span class="project-designer"><i class="fa-solid fa-user-tie"></i> Managed by Ahmed Abo Shady</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: [APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025 -->
+                <a href="https://www.behance.net/gallery/249085223/APPROVED-DUBAIMUNICIPALITY-DUBAI-FUTURE-LABS2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/1acaaa249085223.Y3JvcCw5NzcsNzY0LDU4LDQ.jpg" alt="[APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">[APPROVED] DUBAI MUNICIPALITY - DUBAI FUTURE LABS 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: EHS - WHX 2025 -->
+                <a href="https://www.behance.net/gallery/248271759/EHS-WHX-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a07123248271759.Y3JvcCwxMDA2LDc4NywxMzEsMA.jpg" alt="EHS - WHX 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">EHS - WHX 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: DP WORLD - Ru'ya Careers 2025 -->
+                <a href="https://www.behance.net/gallery/243758971/DP-WORLD-Ruya-Careers-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/994313243758971.Y3JvcCwxMDA2LDc4NywxMDksMA.jpg" alt="DP WORLD - Ru'ya Careers 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">DP WORLD - Ru'ya Careers 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: MOHAP - UAE Innovation Month 2025 -->
+                <a href="https://www.behance.net/gallery/240700883/MOHAP-UAE-Innovation-Month-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6b30ca240700883.Y3JvcCwxMDA2LDc4Nyw3Miww.jpg" alt="MOHAP - UAE Innovation Month 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">MOHAP - UAE Innovation Month 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: VI MARKETS Social Media Campagin 2025 -->
+                <a href="https://www.behance.net/gallery/239768183/VI-MARKETS-Social-Media-Campagin-2025" target="_blank" class="project-card" data-category="campaigns" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/19ee21239768183.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="VI MARKETS Social Media Campagin 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Digital Campaigns & Ads</span>
+                            <h3 class="project-title">VI MARKETS Social Media Campagin 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Social media -->
+                <a href="https://www.behance.net/gallery/133632709/Social-media" target="_blank" class="project-card" data-category="campaigns" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ff1400133632709.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="Social media" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Digital Campaigns & Ads</span>
+                            <h3 class="project-title">Social media</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: National Dream Academy -->
+                <a href="https://www.behance.net/gallery/78722017/National-Dream-Academy" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/df4b8a78722017.Y3JvcCwxMzIzLDEwMzUsMjk4LDIy.png" alt="National Dream Academy" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">National Dream Academy</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Seventy five atelier -->
+                <a href="https://www.behance.net/gallery/78297099/Seventy-five-atelier" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/770e2478297099.Y3JvcCwxOTIwLDE1MDEsMCww.jpg" alt="Seventy five atelier" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Seventy five atelier</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Alkalema Exhibitions Logo -->
+                <a href="https://www.behance.net/gallery/169129833/Alkalema-Exhibitions-Logo" target="_blank" class="project-card" data-category="identity" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/45b845169129833.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="Alkalema Exhibitions Logo" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Alkalema Exhibitions Logo</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Pure Health - WHX Tech -->
+                <a href="https://www.behance.net/gallery/236865877/Pure-Health-WHX-Tech" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8cc9ba236865877.Y3JvcCwxNzk4LDE0MDcsNDMxLDA.jpg" alt="Pure Health - WHX Tech" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">Pure Health - WHX Tech</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Dubai Police - Accessibilities Expo -->
+                <a href="https://www.behance.net/gallery/228193313/-Dubai-Police-Accessibilities-Expo" target="_blank" class="project-card" data-category="exhibitions" data-designer="saeed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b47b26228193313.Y3JvcCwxODA0LDE0MTEsNzM3LDEz.jpg" alt="Dubai Police - Accessibilities Expo" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">Dubai Police - Accessibilities Expo</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Saeed Ali</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Consul Canned Food -->
+                <a href="https://www.behance.net/gallery/242102635/Consul-Canned-Food" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/325d95242102635.Y3JvcCwxNDAxLDEwOTYsMCww.jpg" alt="Consul Canned Food" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Consul Canned Food</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Mixly Jam Packaging Design -->
+                <a href="https://www.behance.net/gallery/239839701/Mixly-Jam-Packaging-Design" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6c6ee8239839701.Y3JvcCwxMjAwLDkzOCwwLDEzMA.jpg" alt="Mixly Jam Packaging Design" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Mixly Jam Packaging Design</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Al-Amir Dates Packaging Design -->
+                <a href="https://www.behance.net/gallery/179167819/Al-Amir-Dates-Packaging-Design" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ae3cfe179167819.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="Al-Amir Dates Packaging Design" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Al-Amir Dates Packaging Design</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Hana Maamoul -->
+                <a href="https://www.behance.net/gallery/198918857/Hana-Maamoul" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/dadd06198918857.Y3JvcCwxNjQ4LDEyODksMjYxLDc4Mw.jpg" alt="Hana Maamoul" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Hana Maamoul</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Sano Tea Biscuit -->
+                <a href="https://www.behance.net/gallery/206858825/Sano-Tea-Biscuit" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f9b8c8206858825.Y3JvcCwxMjAwLDkzOCwwLDEzMA.jpg" alt="Sano Tea Biscuit" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Sano Tea Biscuit</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Dazzel Chocolate -->
+                <a href="https://www.behance.net/gallery/150031419/Dazzel-Chocolate" target="_blank" class="project-card" data-category="identity" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b24e17150031419.Y3JvcCw5MDcsNzA5LDQ4OSw0OTg.jpg" alt="Dazzel Chocolate" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding</span>
+                            <h3 class="project-title">Dazzel Chocolate</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: TII WORLD UTILITIES CONGRESS 2025 -->
+                <a href="https://www.behance.net/gallery/227095985/TII-WORLD-UTILITIES-CONGRESS-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bc3885227095985.68555de6dcc96.png" alt="TII WORLD UTILITIES CONGRESS 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">TII WORLD UTILITIES CONGRESS 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Approved : Dubai Police Annual Inspection Event -->
+                <a href="https://www.behance.net/gallery/228433599/Approved-Dubai-Police-Annual-Inspection-Event" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8e77c1228433599.Y3JvcCw2MjIsNDg2LDU3NiwxMzc.jpg" alt="Approved : Dubai Police Annual Inspection Event" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">Approved : Dubai Police Annual Inspection Event</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: DAFZA National Day 2025 -->
+                <a href="https://www.behance.net/gallery/239694799/DAFZA-National-Day-2025" target="_blank" class="project-card" data-category="exhibitions" data-designer="yara">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/67c86d239694799.Y3JvcCwxMDA2LDc4NywxOTksMA.jpg" alt="DAFZA National Day 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Exhibition & Spatial Design</span>
+                            <h3 class="project-title">DAFZA National Day 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Yara Khamis</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: چيوب | Juyub -->
+                <a href="https://www.behance.net/gallery/249886331/-Juyub" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4a5728249886331.Y3JvcCw5NDEsNzM2LDIyMywzMA.jpeg" alt="چيوب | Juyub" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: Juyub</span>
+                            <h3 class="project-title">چيوب | Juyub</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: منيــــــر -->
+                <a href="https://www.behance.net/gallery/249236973/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7c2057249236973.Y3JvcCw0MzE2LDMzNzUsMCwyMTM.png" alt="منيــــــر" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: Mounir</span>
+                            <h3 class="project-title">منيــــــر</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Videos -->
+                <a href="https://www.behance.net/gallery/249086647/Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e696de249086647.Y3JvcCwxNDE3LDExMDgsMCww.png" alt="Videos" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Cinematic Motion & AI | Various Commercial Clients</span>
+                            <h3 class="project-title">Videos</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: AI Music Videos -->
+                <a href="https://www.behance.net/gallery/249085169/AI-Music-Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a98f21249085169.Y3JvcCwxNDE3LDExMDksMCww.png" alt="AI Music Videos" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Cinematic Motion & AI | AI Music Videos</span>
+                            <h3 class="project-title">AI Music Videos</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Music Videos -->
+                <a href="https://www.behance.net/gallery/249084237/Music-Videos" target="_blank" class="project-card" data-category="ai-video" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7fd4e5249084237.Y3JvcCwxNDE3LDExMDgsMCww.png" alt="Music Videos" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Cinematic Motion & AI | Music Videos</span>
+                            <h3 class="project-title">Music Videos</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: UMI Group II -->
+                <a href="https://www.behance.net/gallery/249083281/UMI-Group-II" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c10874249083281.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="UMI Group II" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: UMI Group</span>
+                            <h3 class="project-title">UMI Group II</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: UMI Group -->
+                <a href="https://www.behance.net/gallery/235200747/UMI-Group" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d50382235200747.Y3JvcCwxMDIyLDgwMCw4OCww.png" alt="UMI Group" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: UMI Group</span>
+                            <h3 class="project-title">UMI Group</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: سناريكا -->
+                <a href="https://www.behance.net/gallery/234831025/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/44b315234831025.Y3JvcCwxNDAwLDEwOTUsMCwxNTMx.png" alt="سناريكا" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: Sanarika</span>
+                            <h3 class="project-title">سناريكا</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: My Portfolio 2025 -->
+                <a href="https://www.behance.net/gallery/228453433/My-Portfolio-2025" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/58c80c228453433.Y3JvcCwxNjE3LDEyNjUsMzE2LDA.png" alt="My Portfolio 2025" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Personal Brand</span>
+                            <h3 class="project-title">My Portfolio 2025</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: The Bloom - Books Cover -->
+                <a href="https://www.behance.net/gallery/230902589/The-Bloom-Books-Cover" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f6129c230902589.Y3JvcCwxNDAwLDEwOTUsMCwzNA.png" alt="The Bloom - Books Cover" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: The Bloom</span>
+                            <h3 class="project-title">The Bloom - Books Cover</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Education -->
+                <a href="https://www.behance.net/gallery/210905147/Education" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7973bd210905147.Y3JvcCwxMDgwLDg0NCwwLDI0.png" alt="Education" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Educational Partners</span>
+                            <h3 class="project-title">Education</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: ابوهندية -->
+                <a href="https://www.behance.net/gallery/144733723/_" target="_blank" class="project-card" data-category="identity" data-designer="ahmed">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/5e4225144733723.Y3JvcCwxMDgwLDg0NCwwLDEw.png" alt="ابوهندية" class="project-img" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-category">Identity & Branding | Client: Abu Hendia</span>
+                            <h3 class="project-title">ابوهندية</h3>
+                            <span class="project-designer"><i class="fa-solid fa-pen-nib"></i> Designed by Ahmed Nasr</span>
+                        </div>
+                        <div class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">Shaping the digital and visual future of luxury brands and market leaders in the Middle East.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">Agency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">Social &amp; Brand Design</a></li>
+                        <li><a href="services.html#marketing">Digital Campaigns &amp; Ads</a></li>
+                        <li><a href="services.html#video">AI Video &amp; Post-Production</a></li>
+                        <li><a href="services.html#graphic">Packaging &amp; Exhibitions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>New Cairo, Egypt</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. All rights reserved.</p>
+                <p>Designed with luxury standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="main.js"></script>
+
+    <!-- Case Study Modal -->
+    <div class="case-modal" id="caseStudyModal">
+        <div class="case-modal-overlay" id="caseModalOverlay"></div>
+        <div class="case-modal-content">
+            <button class="case-modal-close" id="caseModalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="case-modal-body">
+                <div class="case-modal-grid">
+                    <div class="case-modal-image-wrapper">
+                        <img src="" alt="Insights Graph" id="modalGraphImage" class="case-modal-graph">
+                    </div>
+                    <div class="case-modal-details">
+                        <span class="case-tag">Marketing Case Study</span>
+                        <h2 class="case-title" id="modalCampaignTitle">Campaign Name</h2>
+                        <p class="case-desc" id="modalCampaignDesc">Description...</p>
+                        
+                        <div class="case-stats-grid">
+                            <div class="case-stat-card">
+                                <span class="stat-label">Total Views</span>
+                                <span class="stat-value" id="modalStatViews">1.4M</span>
+                            </div>
+                            <div class="case-stat-card">
+                                <span class="stat-label">Growth Rate</span>
+                                <span class="stat-value" id="modalStatGrowth">+1,895%</span>
+                            </div>
+                            <div class="case-stat-card">
+                                <span class="stat-label">Watch / Engagement</span>
+                                <span class="stat-value" id="modalStatExtra">21d 7h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Creative Studio | وكالة الإبداع والتسويق الرقمي الفاخرة</title>
+    <meta name="description" content="Vortex هي وكالة إبداعية متخصصة في التصميم الجغرافي الراقي، بناء الهويات البصرية الفاخرة، إدارة الحملات الإعلانية المبتكرة، وصناعة الفيديوهات والذكاء الاصطناعي لتوسيع ريادة أعمال الفئة الأولى (Class A) في مصر والوطن العربي.">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- FontAwesome Icons for Luxury Brands -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Glow Background Blobs -->
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">الرئيسية</a>
+                <a href="services.html" class="nav-link">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link">معرض الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="about.html" class="nav-link">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="../index.html" class="lang-switch">EN</a>
+
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <canvas id="particlesCanvas" class="hero-canvas"></canvas>
+            <div class="container hero-content">
+                <span class="section-tag">بوابة الإبداع الفاخرة</span>
+                <h1 class="hero-title">نصنع الهويات البصرية<br>و <span>نقود الأسواق</span></h1>
+                <p class="hero-description">
+                    شريك إستراتيجي لرواد الأعمال والمشروعات الفاخرة في مصر والوطن العربي. ندمج بين الفن البصري الراقي، التسويق القائم على التحويل الرقمي، وأدوات إنتاج الفيديو المعتمدة على الذكاء الاصطناعي لبناء حضور لا مثيل له.
+                </p>
+                <div class="hero-actions">
+                    <a href="brief.html" class="btn-magnetic">ابدأ رحلتك معنا <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="portfolio.html" class="btn-secondary">استعرض أعمالنا</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showreel / video Section -->
+        <section class="showcase-video">
+            <div class="container">
+                <div class="video-wrapper" id="showreelWrapper">
+                    <video autoplay loop muted playsinline id="showreelVideo">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-futuristic-abstract-loop-3d-render-42410-large.mp4" type="video/mp4">
+                        متصفحك لا يدعم مشغل الفيديو.
+                    </video>
+                    <div class="video-overlay">
+                        <button class="play-btn" id="playBtn" aria-label="Play Showreel">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <span class="play-title">شاهد الـ Showreel السينمائي لعام 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three pillars (Graphic, Marketing, Video) -->
+        <section class="pillars">
+            <div class="container">
+                <div class="text-center" style="text-align: center;">
+                    <span class="section-tag">ما نبرع فيه</span>
+                    <h2 class="section-title">محاورنا <span>الإستراتيجية الثلاثة</span></h2>
+                    <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                        منظومة إبداعية متكاملة مصممة خصيصاً لتلبية احتياجات المشروعات الكبرى التي تسعى إلى التميز والريادة المطلقة.
+                    </p>
+                </div>
+                
+                <div class="pillars-grid">
+                    <!-- Graphic Design Card -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="pillar-title">تصميم جرافيكس فاخر</h3>
+                        <p class="pillar-desc">
+                            نصمم علامات تجارية تصبح أيقونات في سوقها. تصاميم مبتكرة ومخصصة لشبكات التواصل، هويات بصرية متكاملة، تصميم عبوات المنتجات، وتصميم أجنحة المعارض الدولية.
+                        </p>
+                        <a href="services.html#graphic" class="pillar-link">تعرف على فريق التصميم <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+
+                    <!-- Digital Marketing Card -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="pillar-title">النمو الإستراتيجي والإعلانات</h3>
+                        <p class="pillar-desc">
+                            حملات تسويقية قائمة بالكامل على تحقيق العوائد الاستثمارية. إعداد وإدارة الحملات الإعلانية الممولة، تحسين معدلات التحويل، ونمو الحسابات بذكاء.
+                        </p>
+                        <a href="services.html#marketing" class="pillar-link">إحصائيات حملاتنا التسويقية <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+
+                    <!-- Video / AI Card -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <h3 class="pillar-title">فيديو سينمائي وذكاء اصطناعي</h3>
+                        <p class="pillar-desc">
+                            إنتاج وتعديل فيديوهات تجارية بجودة سينمائية فائقة بالاعتماد على أحدث تقنيات الذكاء الاصطناعي التوليدي، لجذب انتباه جمهورك المستهدف فوراً.
+                        </p>
+                        <a href="services.html#video" class="pillar-link">شاهد الفيديوهات الترويجية <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stats section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <!-- Stat 1 -->
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-size: clamp(2.5rem, 6vw, 5rem);">1.4M+</div>
+                        <div class="stat-label">مشاهدة محققة</div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">مواقع ومتاجر إلكترونية نشطة</div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">تطبيقات جوال مبتكرة</div>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-size: clamp(2.5rem, 6vw, 5rem);">1.9K%</div>
+                        <div class="stat-label">معدل نمو الحملات</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work section -->
+        <section class="featured">
+            <div class="container">
+                <div class="featured-header">
+                    <div>
+                        <span class="section-tag">معرض الأعمال</span>
+                        <h2 class="section-title" style="margin-bottom: 0;">أبرز <span>إبداعاتنا</span></h2>
+                    </div>
+                    <a href="portfolio.html" class="btn-secondary">جميع المشاريع <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <div class="portfolio-grid">
+                    <!-- Featured 1 - Five Hills -->
+                    <a href="https://ahmed128aboshady.github.io/five-hills/contact.html" target="_blank" class="project-card">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="بوابة Five Hills العقارية" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <span class="project-category">تطوير المواقع والمنصات</span>
+                                <h3 class="project-title">بوابة Five Hills العقارية بمصر</h3>
+                            </div>
+                            <div class="project-btn">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Featured 2 - Juyub -->
+                    <a href="https://juyub.com/" target="_blank" class="project-card">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="متجر جعب للجلود الطبيعية" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <span class="project-category">الهويات البصرية والتجارة الإلكترونية</span>
+                                <h3 class="project-title">العلامة التجارية ومتجر Juyub للجلود</h3>
+                            </div>
+                            <div class="project-btn">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners / Infinite Logos -->
+        <section class="partners">
+            <div class="container">
+                <div class="partners-slider">
+                    <!-- Double elements for infinite loop styling -->
+                    <div class="partner-logo">ALEX REALTY</div>
+                    <div class="partner-logo">CAIRO DESIGN</div>
+                    <div class="partner-logo">GULF LUXURY</div>
+                    <div class="partner-logo">EGYPT TECH</div>
+                    <div class="partner-logo">VORTEX HOLDING</div>
+                    <div class="partner-logo">NUBIAN GEMS</div>
+                    <!-- Duplicate for infinite slider wrapper -->
+                    <div class="partner-logo">ALEX REALTY</div>
+                    <div class="partner-logo">CAIRO DESIGN</div>
+                    <div class="partner-logo">GULF LUXURY</div>
+                    <div class="partner-logo">EGYPT TECH</div>
+                    <div class="partner-logo">VORTEX HOLDING</div>
+                    <div class="partner-logo">NUBIAN GEMS</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">
+                        نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تخصصاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">سوشيال ديزاين وهويات</a></li>
+                        <li><a href="services.html#marketing">تسويق وإعلانات رقمية</a></li>
+                        <li><a href="services.html#video">صناعة فيديو وذكاء اصطناعي</a></li>
+                        <li><a href="services.html#graphic">تصميم عبوات ومعارض</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+20 100 123 4567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@vortexstudio.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>التجمع الخامس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+                <p>صنع بكل حب بتصاميم سينور جرافيكس.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="../main.js"></script>
+</body>
+</html>

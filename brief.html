@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Project | Vortex Creative Studio</title>
+    <meta name="description" content="Launch your creative project brief with Vortex. Use our interactive configurator to define your visual and marketing needs.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="about.html" class="nav-link">Agency</a>
+                <a href="brief.html" class="nav-link active">Start Project</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="ar/brief.html" class="lang-switch">AR</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interactive Brief Section -->
+    <section class="brief-container" style="padding: 12rem 0 8rem;">
+        <div class="container">
+            <div class="brief-card" style="position: relative;">
+                
+                <!-- Steps Indicators -->
+                <div class="brief-steps-indicator" id="stepsIndicator">
+                    <div class="step-indicator-node active" data-step="1">1</div>
+                    <div class="step-indicator-node" data-step="2">2</div>
+                    <div class="step-indicator-node" data-step="3">3</div>
+                    <div class="step-indicator-node" data-step="4">4</div>
+                </div>
+
+                <!-- FORM SYSTEM -->
+                <form id="interactiveBriefForm">
+                    
+                    <!-- STEP 1: Select Services -->
+                    <div class="brief-step-content active" data-step="1">
+                        <h2 class="brief-step-title">What services does your luxury business require?</h2>
+                        <div class="brief-options-grid">
+                            <div class="brief-option-card" data-value="Graphic & Brand Design">
+                                <i class="fa-solid fa-pen-nib"></i>
+                                <h3>Graphic & Brand Design</h3>
+                                <p>Brand identities, social designs, premium packaging, trade show booths.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="Digital Campaigns & Ads">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <h3>Digital Campaigns & Ads</h3>
+                                <p>Social channels management, conversion paid ads, elite web app builds.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="Motion Production & AI">
+                                <i class="fa-solid fa-robot"></i>
+                                <h3>Motion Production & AI</h3>
+                                <p>Cinematic scripted videos, post-production editing, generative AI creations.</p>
+                            </div>
+                            <div class="brief-option-card" data-value="Integrated Full Suite">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <h3>Integrated Full Suite</h3>
+                                <p>All of the above combined to launch an absolute market takeover.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Budget Slider -->
+                    <div class="brief-step-content" data-step="2">
+                        <h2 class="brief-step-title">What is your estimated project budget range?</h2>
+                        <div class="budget-slider-container">
+                            <div class="budget-value-display">
+                                $<span id="budgetValue">10,000</span> USD
+                            </div>
+                            <input type="range" class="budget-slider" id="budgetRange" min="2000" max="50000" step="1000" value="10000">
+                            <p style="text-align: center; color: var(--text-gray); margin-top: 1rem; font-size: 0.95rem;">
+                                Premium budgets unlock custom 3D renders, high-end production, and custom web builds.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Brand Description -->
+                    <div class="brief-step-content" data-step="3">
+                        <h2 class="brief-step-title">Tell us about your visions and objectives</h2>
+                        <div class="brief-form-group">
+                            <label for="brandDescription" class="brief-label">Describe your brand and project needs</label>
+                            <textarea id="brandDescription" class="brief-textarea" placeholder="Example: We are a real estate group launching a new luxury residential compound in Egypt. We need a premium identity package and a digital lead gen campaign..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Contact Details -->
+                    <div class="brief-step-content" data-step="4">
+                        <h2 class="brief-step-title">How can we contact you?</h2>
+                        <div class="brief-form-group">
+                            <label for="clientName" class="brief-label">Full Name</label>
+                            <input type="text" id="clientName" class="brief-input" required placeholder="Ahmed El-Rashidy">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientCompany" class="brief-label">Company / Brand Name</label>
+                            <input type="text" id="clientCompany" class="brief-input" placeholder="Al-Fahad Holdings">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientPhone" class="brief-label">Phone Number (WhatsApp preferred)</label>
+                            <input type="tel" id="clientPhone" class="brief-input" required placeholder="+20 100 123 4567">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="clientEmail" class="brief-label">Email Address</label>
+                            <input type="email" id="clientEmail" class="brief-input" required placeholder="name@company.com">
+                        </div>
+                        <div class="brief-form-group">
+                            <label for="commChannel" class="brief-label">Preferred Communication Channel</label>
+                            <select id="commChannel" class="brief-input">
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Phone Call">Direct Phone Call</option>
+                                <option value="Email">Email Address</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="brief-actions">
+                        <button type="button" class="brief-btn brief-btn-prev" id="prevBtn" style="visibility: hidden;">Previous</button>
+                        <button type="button" class="brief-btn brief-btn-next" id="nextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+
+                <!-- Success State Overlay -->
+                <div id="briefSuccessOverlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-dark-card); z-index: 10; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3rem; border-radius: 24px;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--text-white); margin-bottom: 2rem; box-shadow: var(--glow-purple);">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h2 class="section-title">Brief Sent <span>Successfully!</span></h2>
+                    <p style="color: var(--text-gray); max-width: 500px; margin-bottom: 2.5rem; font-size: 1.1rem;">
+                        Thank you for reaching out to Vortex. You can send this completed brief directly to our client relations manager on WhatsApp to fast-track your inquiry and get a response within minutes.
+                    </p>
+                    <a href="#" id="whatsappSendBtn" target="_blank" class="btn-magnetic" style="background: #25D366; box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);">
+                        Send via WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">Shaping the digital and visual future of luxury brands and market leaders in the Middle East.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">Agency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">Social &amp; Brand Design</a></li>
+                        <li><a href="services.html#marketing">Digital Campaigns &amp; Ads</a></li>
+                        <li><a href="services.html#video">AI Video &amp; Post-Production</a></li>
+                        <li><a href="services.html#graphic">Packaging &amp; Exhibitions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>New Cairo, Egypt</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. All rights reserved.</p>
+                <p>Designed with luxury standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="main.js?v=1.0.2"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فريق العمل والذكريات | Vortex Creative Studio</title>
+    <meta name="description" content="تعرف على نخبة مبدعي ومصممي Vortex واستكشف ألبوم ذكريات الفريق الفريدة، رحلاتنا، ولقطات العمل اليومية خلف الكواليس.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link ">الرئيسية</a>
+                <a href="services.html" class="nav-link ">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link ">معرض الأعمال</a>
+                <a href="team.html" class="nav-link active">الفريق</a>
+                <a href="about.html" class="nav-link ">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="../team.html" class="lang-switch">EN</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="memories-section" style="overflow: hidden;">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        
+        <div class="container" id="love-diary-container">
+            
+            <div class="diary-header">
+                <span class="section-tag">خلف الكواليس</span>
+                <h2 class="section-title">لحظاتنا <span>التذكارية المشتركة</span></h2>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                    ألبوم ذكريات الفريق، اللحظات الرائعة في المكتب، الرحلات والمغامرات المشتركة. ✨
+                </p>
+            </div>
+
+            <!-- Form to Add Memories -->
+            <div class="diary-form" id="main-form">
+                <input type="text" id="placeName" placeholder="ماذا فعلنا اليوم؟ (مثال: رحلة دهب)" required>
+                
+                <button type="button" class="btn-love btn-location" id="getLocationBtn">
+                    📍 تحديد موقعنا الجغرافي
+                </button>
+                <p id="locationStatus" style="font-size: 12px; color: #d6336c; display: none; text-align: center; margin-bottom: 15px; font-weight: 600;">تم تحديد الموقع بنجاح! 🤍</p>
+                
+                <div class="rating-container">
+                    <p>ما مدى روعة هذه اللحظة؟</p>
+                    <div class="stars">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star active" data-value="1">★</span>
+                    </div>
+                </div>
+
+                <textarea id="dateDetails" rows="3" placeholder="ما الذي جعل هذه الذكرى مميزة؟..." required></textarea>
+                
+                <label for="cameraInput" class="btn-love btn-camera">
+                    📸 اختر صور الذكرى
+                </label>
+                <input type="file" id="cameraInput" accept="image/*" multiple>
+                
+                <button type="button" class="btn-love btn-audio" id="recordAudioBtn">
+                    🎤 سجل تسجيل صوتي (ميكروفون)
+                </button>
+                <audio id="audioPreview" controls style="display: none; width: 100%; margin-bottom: 15px;"></audio>
+                
+                <div id="preview-container"></div>
+
+                <button type="button" class="btn-love" id="addMemoryBtn">
+                    💖 احفظ لحظتنا التذكارية
+                </button>
+            </div>
+
+            <!-- Memories Grid Gallery -->
+            <div class="memories-gallery" id="memoriesGallery"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox Zoom Slider -->
+    <div id="lightbox">
+        <button class="close-lightbox" id="closeLightbox">×</button>
+        <div class="lightbox-controls">
+            <button class="nav-btn" id="prevImage">❮</button>
+            <button class="nav-btn" id="nextImage">❯</button>
+        </div>
+        <img id="lightbox-img" src="" alt="Gallery Image" loading="lazy">
+        <div id="lightbox-counter">1 / 1</div>
+    </div>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">
+                        نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تخصصاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#graphic">سوشيال ديزاين وهويات</a></li>
+                        <li><a href="services.html#marketing">تسويق وإعلانات رقمية</a></li>
+                        <li><a href="services.html#video">صناعة فيديو وذكاء اصطناعي</a></li>
+                        <li><a href="services.html#graphic">تصميم عبوات ومعارض</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+20 100 123 4567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@vortexstudio.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>التجمع الخامس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+                <p>صنع بكل حب بتصاميم سينور جرافيكس.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main JS Code -->
+    <script src="../main.js"></script>
