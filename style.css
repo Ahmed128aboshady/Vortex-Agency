@@ -1782,6 +1782,7 @@ body[dir="rtl"] .project-card:hover .project-btn {
 .mobile-nav-active .nav-menu {
     display: flex !important;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     top: 0;
     left: -100%; /* Slides from the left for RTL consistency */
@@ -1812,6 +1813,7 @@ body.light-theme.mobile-nav-active .nav-menu {
     font-size: 1.3rem;
     font-weight: 700;
     width: 100%;
+    text-align: center;
 }
 
 .mobile-nav-active .nav-cta {
