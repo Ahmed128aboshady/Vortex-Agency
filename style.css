@@ -1680,6 +1680,27 @@ body[dir="rtl"] .project-card:hover .project-btn {
         font-size: 2rem;
     }
     
+    .footer {
+        text-align: center;
+    }
+    
+    .footer-brand {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+    
+    .footer-contact-item {
+        justify-content: center;
+    }
+    
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
