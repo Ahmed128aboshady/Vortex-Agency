@@ -1630,6 +1630,12 @@ body[dir="rtl"] .project-card:hover .project-btn {
         padding: 3rem 0;
     }
     
+    .video-wrapper {
+        aspect-ratio: 9/16;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
     .service-graphic {
         width: 100%;
         max-width: 100%;
