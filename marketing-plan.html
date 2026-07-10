@@ -25,6 +25,9 @@
             max-width: 800px;
             margin: 0 auto 5rem;
             padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
         }
         .timeline::after {
             content: '';
@@ -35,43 +38,44 @@
             bottom: 0;
             left: 50%;
             margin-left: -1px;
+            z-index: 0;
         }
         .timeline-item {
-            padding: 10px 40px;
             position: relative;
-            background-color: inherit;
-            width: 50%;
+            width: 100%;
+            display: flex;
+            z-index: 1;
             box-sizing: border-box;
+        }
+        .timeline-item.left {
+            justify-content: flex-start;
+        }
+        .timeline-item.right {
+            justify-content: flex-end;
         }
         .timeline-item::after {
             content: '';
             position: absolute;
             width: 20px;
             height: 20px;
-            right: -10px;
             background-color: var(--bg-dark);
             border: 4px solid var(--accent-magenta);
-            top: 15px;
             border-radius: 50%;
-            z-index: 1;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            z-index: 2;
             transition: var(--transition-fast);
         }
-        .timeline-item.left {
-            left: 0;
-        }
-        .timeline-item.right {
-            left: 50%;
-        }
-        .timeline-item.right::after {
-            left: -10px;
-        }
         .timeline-content {
+            width: 45%;
             padding: 2rem;
             background: var(--bg-dark-card);
             border: 1px solid var(--border-glass);
             position: relative;
             border-radius: 16px;
             transition: var(--transition-smooth);
+            box-sizing: border-box;
         }
         .timeline-content:hover {
             border-color: var(--accent-purple);
@@ -92,25 +96,17 @@
         }
         @media (max-width: 768px) {
             .timeline::after {
-                left: 31px;
+                left: 20px;
             }
             .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            .timeline-item.left {
-                left: 0;
-            }
-            .timeline-item.right {
-                left: 0;
+                justify-content: flex-start !important;
+                padding-left: 50px;
             }
             .timeline-item::after {
-                left: 21px;
-                right: auto;
+                left: 20px;
             }
-            .timeline-item.right::after {
-                left: 21px;
+            .timeline-content {
+                width: 100%;
             }
         }
     </style>
@@ -190,6 +186,15 @@
                     <h3 class="pillar-title">B2B LinkedIn Outreach</h3>
                     <p class="pillar-desc">
                         Direct outreach targeting Real Estate Marketing Directors and Luxury Brand Founders. Sending highly personalized value propositions based on their current visual pain points.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <h3 class="pillar-title">Facebook Organic Leads</h3>
+                    <p class="pillar-desc">
+                        Ahmed Abo Shady will monitor and track target Facebook groups to identify businesses searching for website development, marketing agencies, packaging designs, or exhibition setups to acquire organic B2B leads.
                     </p>
                 </div>
             </div>

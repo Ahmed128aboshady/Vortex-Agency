@@ -25,6 +25,9 @@
             max-width: 800px;
             margin: 0 auto 5rem;
             padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
         }
         .timeline::after {
             content: '';
@@ -35,48 +38,44 @@
             bottom: 0;
             left: 50%;
             margin-left: -1px;
+            z-index: 0;
         }
         .timeline-item {
-            padding: 10px 40px;
             position: relative;
-            background-color: inherit;
-            width: 50%;
+            width: 100%;
+            display: flex;
+            z-index: 1;
             box-sizing: border-box;
+        }
+        .timeline-item.left {
+            justify-content: flex-start;
+        }
+        .timeline-item.right {
+            justify-content: flex-end;
         }
         .timeline-item::after {
             content: '';
             position: absolute;
             width: 20px;
             height: 20px;
-            right: -10px;
             background-color: var(--bg-dark);
             border: 4px solid var(--accent-magenta);
-            top: 15px;
             border-radius: 50%;
-            z-index: 1;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            z-index: 2;
             transition: var(--transition-fast);
         }
-        .timeline-item.left {
-            left: 50%;
-        }
-        .timeline-item.right {
-            left: 0;
-        }
-        .timeline-item.left::after {
-            left: -10px;
-            right: auto;
-        }
-        .timeline-item.right::after {
-            right: -10px;
-            left: auto;
-        }
         .timeline-content {
+            width: 45%;
             padding: 2rem;
             background: var(--bg-dark-card);
             border: 1px solid var(--border-glass);
             position: relative;
             border-radius: 16px;
             transition: var(--transition-smooth);
+            box-sizing: border-box;
         }
         .timeline-content:hover {
             border-color: var(--accent-purple);
@@ -98,30 +97,20 @@
         @media (max-width: 768px) {
             .timeline::after {
                 left: auto;
-                right: 31px;
+                right: 20px;
             }
             .timeline-item {
-                width: 100%;
-                padding-right: 70px;
-                padding-left: 25px;
-            }
-            .timeline-item.left {
-                left: 0;
-            }
-            .timeline-item.right {
-                left: 0;
+                justify-content: flex-start !important;
+                padding-right: 50px;
+                padding-left: 0;
             }
             .timeline-item::after {
-                right: 21px;
+                right: 20px;
                 left: auto;
+                transform: translateX(50%);
             }
-            .timeline-item.left::after {
-                right: 21px;
-                left: auto;
-            }
-            .timeline-item.right::after {
-                right: 21px;
-                left: auto;
+            .timeline-content {
+                width: 100%;
             }
         }
     </style>
@@ -201,6 +190,15 @@
                     <h3 class="pillar-title">صيد العملاء على LinkedIn</h3>
                     <p class="pillar-desc">
                         هدير وأحمد أبو شادي هيبعتوا رسايل شخصية ومباشرة لمديرين التسويق في شركات التطوير العقاري الكبيرة والبراندات الفاخرة، رسايل ذكية متفصلة مش كوبي بيست.
+                    </p>
+                </div>
+
+                <!-- قنوات 4 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <h3 class="pillar-title">أورجانيك ليدز على Facebook</h3>
+                    <p class="pillar-desc">
+                        أحمد أبو شادي هيتابع ويعمل تراك لجروبات الفيسبوك المستهدفة عشان يوصل للشركات والعملاء اللي بيدوروا على تصميم ويبسايت، ماركتنج إيجنسي، باكجينج، أو معارض (Exhibition)، ويجيب أورجانيك ليدز سخنة ومهتمة.
                     </p>
                 </div>
             </div>
