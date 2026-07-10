@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطط العمل والسياسات الداخلية | Vortex Creative Studio</title>
+    <meta name="description" content="الملف الموحد لخطط الماركتنج والعمليات والسياسات الداخلية لوكالة Vortex Creative Studio.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .plan-hero {
+            padding-top: 150px;
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+        .tabs-container {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 1.5rem;
+        }
+        .tabs-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 1.5rem;
+        }
+        .tab-btn {
+            background: transparent;
+            border: 1px solid var(--border-glass);
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tab-btn:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-purple);
+        }
+        .tab-btn.active {
+            background: var(--gradient-primary);
+            color: #ffffff;
+            border-color: var(--accent-magenta);
+            box-shadow: var(--glow-magenta);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--border-glass);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+            z-index: 0;
+        }
+        .timeline-item {
+            position: relative;
+            width: 100%;
+            display: flex;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        .timeline-item.left {
+            justify-content: flex-start;
+        }
+        .timeline-item.right {
+            justify-content: flex-end;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--bg-dark);
+            border: 4px solid var(--accent-magenta);
+            border-radius: 50%;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            z-index: 2;
+            transition: var(--transition-fast);
+        }
+        .timeline-content {
+            width: 45%;
+            padding: 2rem;
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            position: relative;
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+            box-sizing: border-box;
+        }
+        .timeline-content:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-purple);
+        }
+        .timeline-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .policy-card {
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .policy-card:hover {
+            border-color: var(--accent-magenta);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-magenta);
+        }
+        .policy-icon {
+            font-size: 2rem;
+            color: var(--accent-magenta);
+            margin-bottom: 1.5rem;
+        }
+        body.light-theme .timeline-content,
+        body.light-theme .policy-card {
+            background: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: auto;
+                right: 20px;
+            }
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-right: 50px;
+                padding-left: 0;
+            }
+            .timeline-item::after {
+                right: 20px;
+                left: auto;
+                transform: translateX(50%);
+            }
+            .timeline-content {
+                width: 100%;
+            }
+            .tab-btn {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="services.html" class="nav-link">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link">معرض الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="about.html" class="nav-link">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../plans.html" class="lang-switch">EN</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="plan-hero">
+        <div class="container">
+            <span class="section-tag">كتيب خطط الوكالة</span>
+            <h1 class="section-title">خطط العمل <span>والسياسات الداخلية</span></h1>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px;">
+                ملف عمل موحد يجمع بين خطة الماركتنج وجلب العملاء المخصصة لـ (هدير)، ودليل تنظيم الفريق والعمليات والرواتب المخصصة لـ (بانسيه). تنقل بين التبويبات بالأسفل:
+            </p>
+        </div>
+    </section>
+
+    <div class="tabs-container">
+        <div class="tabs-buttons">
+            <button class="tab-btn active" data-tab="marketing"><i class="fa-solid fa-chart-line"></i> خطة الماركتنج والمبيعات</button>
+            <button class="tab-btn" data-tab="operations"><i class="fa-solid fa-gears"></i> تنظيم العمليات والسياسات</button>
+        </div>
+
+        <!-- MARKETING PLAN TAB -->
+        <div class="tab-content active" id="marketing">
+            <!-- قنوات جلب العملاء -->
+            <section style="padding-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="section-tag">المبيعات</span>
+                    <h2 class="section-title">قنوات جلب <span>العملاء (الليدز)</span></h2>
+                </div>
+                
+                <div class="strategy-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3 class="pillar-title">بورتفوليو الموقع الإلكتروني</h3>
+                        <p class="pillar-desc">
+                            البورتفوليو جاهز بالفعل ومعروض على الموقع بتاعنا، وفيه مشاريع البراندينج وتصميم المعارض بشكل دراسات حالة (Case Studies) قوية، توري العميل إحنا بنفكر إزاي وبنطلع شغل فاخر شكله إيه عشان نثبت قوتنا.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-video"></i></div>
+                        <h3 class="pillar-title">فيديوهات الذكاء الاصطناعي والموشن</h3>
+                        <p class="pillar-desc">
+                            أحمد نصر هيعمل فيديوهات قصيرة (Reels) تخطف العين وتوري إمكانياتنا في الذكاء الاصطناعي، دي أحسن حاجة بتجيب مشاهدات وتسمّع وتجيب تفاعل لاسم الوكالة بسرعة البرق.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <h3 class="pillar-title">صيد العملاء على LinkedIn</h3>
+                        <p class="pillar-desc">
+                            هدير وأحمد أبو شادي هيبعتوا رسايل شخصية ومباشرة لمديرين التسويق في شركات التطوير العقاري الكبيرة والبراندات الفاخرة، رسايل ذكية متفصلة مش كوبي بيست.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                        <h3 class="pillar-title">أورجانيك ليدز على Facebook</h3>
+                        <p class="pillar-desc">
+                            أحمد أبو شادي هيتابع ويعمل تراك لجروبات الفيسبوك المستهدفة عشان يوصل للشركات والعملاء اللي بيدوروا على تصميم ويبسايت، ماركتنج إيجنسي، باكجينج، أو معارض (Exhibition)، ويجيب أورجانيك ليدز سخنة ومهتمة.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- رحلة العميل -->
+            <section style="padding-bottom: 6rem; background: rgba(7, 7, 9, 0.2);">
+                <div style="text-align: center; margin-bottom: 5rem; padding-top: 4rem;">
+                    <span class="section-tag">خارطة الطريق</span>
+                    <h2 class="section-title">رحلة العميل <span>لحد توقيع العقد</span></h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 01</div>
+                            <h3>فلترة وتصنيف الليدز</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                بنشوف الليدز اللي جاتلنا من فورم الموقع ونقيم ميزانيتها ووقتها وهل الشغل يناسب تخصصاتنا ولا لأ قبل ما نكلمهم.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 02</div>
+                            <h3>مكالمة الاكتشاف (15 دقيقة)</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                مكالمة سريعة مع العميل عشان نفهم دماغه وعاوز يوصل لإيه بالظبط ونحدد طلباته بشكل دقيق ومريح.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 03</div>
+                            <h3>البروبوزال والـ Moodboard</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                بنقعد مع أحمد نصر (المدير الإبداعي) ونحضر بريزنتيشن قوي فيها الفكرة الإبداعية المقترحة والتكلفة المالية بالتفصيل.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 04</div>
+                            <h3>التفاوض وتظبيط البنود</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                بنتناقش مع العميل في تفاصيل الأسعار وعدد التعديلات المسموحة لحد ما نوصل لاتفاق يرضي الكل ويظبط ميزانية المشروع.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 05</div>
+                            <h3>كتابة العقد والدفعة الأولى</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                بنكتب العقد ونمضيه. شروط الدفع المعتادة: 50% مقدم لبدء الشغل، 30% بعد اعتماد البروفات الأولى، و20% قبل تسليم الملفات النهائية.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-number">الخطوة 06</div>
+                            <h3>تسليم الشغل لبانسيه</h3>
+                            <p class="pillar-desc" style="margin-bottom: 0;">
+                                بنسلم العميل وتفاصيل المشروع رسمياً لـ بانسيه (مديرة الفريق) عشان تبدأ تقسم المهام وتتابع التيم والـ Deadlines في الوقت المطلوب.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- أسئلة المناقشة للماركتنج -->
+            <section style="padding-top: 5rem; padding-bottom: 4rem;">
+                <div style="background: rgba(255, 171, 0, 0.02); border: 1px dashed #ffab00; border-radius: 24px; padding: 3rem; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <span class="section-tag" style="background: rgba(255, 171, 0, 0.15); color: #ffab00;">لمناقشة الفريق</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffab00;">🤔 نقاط مفتوحة للمناقشة (خاص بـ هدير وأحمد أبو شادي)</h2>
+                    <p class="pillar-desc" style="margin-bottom: 2rem; color: var(--text-gray);">محتاجين نناقش النقاط دي ونحط لها إجابات واضحة عشان نكمل بيها خطة الماركتنج:</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">١</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">صنارة القيمة (Value Hook):</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">إيه العرض أو الخدمة المجانية اللي هدير هتقدمها للعملاء على LinkedIn عشان تشدهم يوافقوا على مكالمة الـ 15 دقيقة؟ (مثال: Free Design or 3D Spatial Audit لمشروعهم الحالي).</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٢</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">تحديد مواصفات العميل المستهدف (ICP):</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">ما هي الفلاتر الدقيقة للمطور العقاري أو البراند المستهدف؟ (مثلاً: حجم الميزانية، عدد المشاريع النشطة، أو النطاق الجغرافي للعمل).</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٣</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">سلسلة خطوات المتابعة (Follow-up Cadence):</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">العميل اللي مش هيرد على أول رسالة، هنتابعه كام مرة؟ وإيه الفترات الزمنية بين المتابعات والكلام المقترح لكل مرة؟</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٤</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">صناعة محتوى الفيديو للـ B2B:</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">إزاي نضمن إن فيديوهات أحمد نصر بالذكاء الاصطناعي والموشن بتجذب المديرين وأصحاب القرار (عن طريق إظهار الـ ROI والأرقام) مش مجرد مصممين هواة؟</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- OPERATIONS PLAN TAB -->
+        <div class="tab-content" id="operations">
+            <!-- أقسام الوكالة وتوزيع الأدوار -->
+            <section style="padding-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="section-tag">الهيكل التنظيمي</span>
+                    <h2 class="section-title">أقسام الوكالة <span>وتوزيع الأدوار</span></h2>
+                </div>
+
+                <div class="dept-grid">
+                    <div class="policy-card">
+                        <div class="policy-icon"><i class="fa-solid fa-crown"></i></div>
+                        <h3>الماركتنج</h3>
+                        <p class="pillar-desc" style="margin-top: 1rem;">
+                            <strong>المسؤول:</strong> هدير مصطفى<br>
+                            التركيز على مبيعات الـ B2B، العلاقات العامة مع البراندات الكبيرة، جلب العملاء الجداد، والمتابعة المالية العامة للشركة.
+                        </p>
+                    </div>
+
+                    <div class="policy-card">
+                        <div class="policy-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>المدير الإبداعي والفيديو</h3>
+                        <p class="pillar-desc" style="margin-top: 1rem;">
+                            <strong>المسؤول:</strong> أحمد نصر<br>
+                            مسؤول عن جودة الديزاينات السوشيال ميديا ومراجعتها فنيًا قبل أي تسليم، وإنتاج الفيديوهات الإبداعية بالذكاء الاصطناعي والموشن.
+                        </p>
+                    </div>
+
+                    <div class="policy-card">
+                        <div class="policy-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h3>تصميم 3D والمعارض</h3>
+                        <p class="pillar-desc" style="margin-top: 1rem;">
+                            <strong>المسؤول:</strong> سعيد علي<br>
+                            تصميم أجنحة المعارض والديكورات الداخلية ثلاثية الأبعاد وتقديم تصميمات ومخططات تنفيذية للمهندسين والمقاولين.
+                        </p>
+                    </div>
+
+                    <div class="policy-card">
+                        <div class="policy-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3>الهوية والعلب (Packaging)</h3>
+                        <p class="pillar-desc" style="margin-top: 1rem;">
+                            <strong>المسؤول:</strong> يارا خميس<br>
+                            تصميم اللوجوهات وكتيبات الهوية البصرية، وتصميم عبوات المنتجات والعلب الفاخرة بأعلى معايير تنافسية.
+                        </p>
+                    </div>
+
+                    <div class="policy-card">
+                        <div class="policy-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>إدارة الفريق والعمليات</h3>
+                        <p class="pillar-desc" style="margin-top: 1rem;">
+                            <strong>المسؤول:</strong> بانسيه خميس<br>
+                            القلب النابض للشركة، بتوزع المهام اليومية، وتتابع الجداول والـ Deadlines وتسهل التواصل بين الكل عشان الشغل يخلص مظبوط.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- السياسات الداخلية ونظام المرتبات -->
+            <section style="padding-bottom: 6rem; background: rgba(7, 7, 9, 0.2);">
+                <div style="text-align: center; margin-bottom: 5rem; padding-top: 4rem;">
+                    <span class="section-tag">السياسات</span>
+                    <h2 class="section-title">القوانين <span>ونظام الأجور</span></h2>
+                </div>
+
+                <div class="strategy-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h3 class="pillar-title">قوانين التيم والتواصل</h3>
+                        <p class="pillar-desc">
+                            شغلنا مرن ومختلط، المهم التسليم يخلص في وقته وبأعلى كواليتي. التواصل كله على Slack عشان نفصل الشغل عن الواتساب الشخصي، وتتبع الشغل وتوزيع المهام هيكون على Odoo Project. كل يوم إثنين الساعة 4 العصر بنعمل ميتينج أسبوعي نراجع فيه المشاريع الحالية والجاية، وبنلتزم بسرية تامة للشغل.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                        <h3 class="pillar-title">مواعيد صرف المرتبات</h3>
+                        <p class="pillar-desc">
+                            المرتبات الأساسية بتتحول بانتظام في الفترة من يوم 1 ليوم 5 من كل شهر ميلادي جديد، عن طريق التحويل البنكي أو المحفظة الإلكترونية اللي تريح أعضاء التيم.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-gift"></i></div>
+                        <h3 class="pillar-title">البونص وعمولة المبيعات</h3>
+                        <p class="pillar-desc">
+                            فيه بونص لكل مشروع بيتسلم بدري ويعجب العميل من أول مرة، وفيه عمولة لأي حد في التيم يساهم في جلب عميل جديد للشركة بتضاف لمرتب الشهر التالي.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- أسئلة المناقشة للعمليات -->
+            <section style="padding-top: 5rem; padding-bottom: 4rem;">
+                <div style="background: rgba(255, 171, 0, 0.02); border: 1px dashed #ffab00; border-radius: 24px; padding: 3rem; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <span class="section-tag" style="background: rgba(255, 171, 0, 0.15); color: #ffab00;">لمناقشة الفريق</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffab00;">🤔 نقاط مفتوحة للمناقشة (خاص بـ بانسيه والتيم)</h2>
+                    <p class="pillar-desc" style="margin-bottom: 2rem; color: var(--text-gray);">محتاجين نناقش النقاط دي ونحط لها إجابات واضحة لتنظيم آلية العمل الداخلي وصرف الأجور:</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">١</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">سياسة تعديلات العميل (Scope Creep):</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">ما هو الحد الأقصى لجولات التعديل المجانية في المشاريع؟ (هل نعتمد 3 جولات كحد أقصى)؟ وما هي طريقة تسعير التعديلات الإضافية بعد ذلك؟</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٢</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">قائمة فحص الجودة (QA Checklist) لأحمد نصر:</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">ما هي المعايير التقنية الدقيقة لضمان الجودة قبل تسليم أي ملف للعميل؟ (مثل جاهزية الألوان للطباعة CMYK، ملاءمة الشاشات للموبايل، وتوافق التصميم مع الهوية).</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٣</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">الطاقة الاستيعابية وتوزيع الموارد (Resource Allocation):</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">ما هو الحد الأقصى للمشاريع النشطة التي يستطيع سعيد ويارا العمل عليها في نفس الوقت قبل الاستعانة بـ Freelancers لتخفيف الضغط؟</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: #ffab00; color: #000; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">٤</span>
+                            <div>
+                                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">مراحل Odoo Project:</h4>
+                                <p style="margin: 0; font-size: 0.95rem; color: var(--text-gray);">هل نعتمد المراحل الخمسة المقترحة (`Backlog`, `In Progress`, `Creative Review`, `Client Review`, `Approved`) رسمياً داخل لوحة إدارة المهام؟</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>التجمع الخامس، القاهرة، مصر</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="../main.js"></script>
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
