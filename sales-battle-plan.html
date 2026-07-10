@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة مبيعات Vortex ⚔️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding-bottom: 5rem;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+        }
+        .app-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        .app-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+        }
+        .app-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .progress-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--glow-purple);
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.50rem;
+        }
+        .progress-bar-bg {
+            background: rgba(255, 255, 255, 0.1);
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            background: var(--gradient-primary);
+            width: 0%;
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .day-section {
+            margin-bottom: 2.5rem;
+        }
+        .day-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-magenta);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 0.5rem;
+        }
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .task-card {
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+        .task-card:hover {
+            border-color: var(--accent-purple);
+        }
+        .task-checkbox {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 2px solid var(--accent-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            transition: var(--transition-fast);
+            color: transparent;
+        }
+        .task-card.checked .task-checkbox {
+            background: var(--gradient-primary);
+            border-color: var(--accent-magenta);
+            color: #ffffff;
+        }
+        .task-info {
+            flex-grow: 1;
+        }
+        .task-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            transition: var(--transition-fast);
+        }
+        .task-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.4;
+            transition: var(--transition-fast);
+        }
+        .task-card.checked {
+            opacity: 0.50;
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+        .task-card.checked .task-name {
+            text-decoration: line-through;
+            color: var(--text-gray);
+        }
+        .floating-action {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: calc(100% - 3rem);
+            max-width: 540px;
+        }
+        .btn-scripts {
+            width: 100%;
+            background: var(--gradient-primary);
+            border: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 16px;
+            box-shadow: var(--glow-magenta);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+        }
+        .btn-scripts:active {
+            transform: scale(0.98);
+        }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .drawer-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #0c0c0f;
+            border-top: 1px solid var(--border-glass);
+            border-radius: 24px 24px 0 0;
+            z-index: 201;
+            max-height: 80%;
+            overflow-y: auto;
+            transform: translateY(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 2rem 1.5rem;
+        }
+        .drawer.active {
+            transform: translateY(0);
+        }
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .drawer-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent-magenta);
+        }
+        .btn-close {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .script-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .script-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--accent-purple);
+        }
+        .script-text {
+            background: #070709;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #e0e0e0;
+            user-select: all;
+            margin-bottom: 1rem;
+            white-space: pre-line;
+        }
+        .btn-copy {
+            background: rgba(155, 48, 255, 0.15);
+            border: 1px solid var(--accent-purple);
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            width: fit-content;
+        }
+        .toast {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            z-index: 300;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-shadow: var(--glow-magenta);
+            pointer-events: none;
+        }
+        .toast.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <span class="section-tag" style="font-size: 0.8rem;">VORTEX B2B SALES</span>
+            <h1 class="app-title">خطة إغلاق الصفقات ⚔️</h1>
+            <p style="font-size: 0.95rem; color: var(--text-gray);">أحمد أبو شادي — ديدلاين ١٦ يوليو ٢٠٢٦</p>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>نسبة إنجاز المهام</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="task-sections">
+            <!-- الجمعة -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الجمعة ١٠ يوليو: صيد العلاقات الدافئة</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t1">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">تجميع "قائمة الـ ٥٠"</div>
+                            <div class="task-desc">كتابة قائمة بـ ٥٠ عميل محتمل أو جهة اتصال دافئة من أصدقاء ومعارف ومطورين عقاريين سابقين.</div>
+                        </div>
+                    </div>
+                    <div class="task-card" data-task-id="t2">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">مراسلة شبكة المعارف (Warm Outreach)</div>
+                            <div class="task-desc">إرسال رسائل ودية غير بيعية لفتح محادثات وطلب مكالمة دردشة سريعة الأسبوع القادم.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- السبت -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> السبت ١١ يوليو: الهجوم على السوشيال ميديا</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t3">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">مراقبة وتتبع جروبات فيسبوك</div>
+                            <div class="task-desc">البحث بكلمات مفتاحية (ويبسايت، تصميم معرض، علب، ماركتنج) والتواصل فوراً مع طالبي الخدمة.</div>
+                        </div>
+                    </div>
+                    <div class="task-card" data-task-id="t4">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">فلترة ليدز LinkedIn</div>
+                            <div class="task-desc">تحديد وتصفية حسابات ٢٠ مدير تسويق عقاري ومؤسس لبراند فاخر لإرسال العروض غداً.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأحد -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الأحد ١٢ يوليو: إرسال العروض المغرية</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t5">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">إرسال الـ Value Hooks لـ ٢٠ عميل</div>
+                            <div class="task-desc">إرسال رسائل LinkedIn تعرض قيمة مجانية (كونسيبت 3D مجاني أو مراجعة ويبسايت) لجذب الاهتمام.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الاثنين -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الاثنين ١٣ يوليو: مكالمات الاكتشاف</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t6">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">حجز ٥ مكالمات استكشافية</div>
+                            <div class="task-desc">إجراء المكالمات مع الليدز المهتمة لفهم مشاكلهم وميزانيتهم وتفاصيل طلباتهم.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الثلاثاء -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الثلاثاء ١٤ يوليو: البروبوزال والخصم التأسيسي</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t7">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">تقديم العروض المالية (Proposals)</div>
+                            <div class="task-desc">تجهيز وإرسال البروبوزال مع التيم مستنداً على باقتين لتسريع عملية اتخاذ القرار.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأربعاء -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الأربعاء ١٥ يوليو: المتابعة الضاغطة للتقفيل</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t8">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">الاتصال بالعملاء المهتمين للتقفيل</div>
+                            <div class="task-desc">توضيح أن العرض والخصم الاستثنائي يغلق غداً وتأكيد جاهزية التيم للبدء الفوري.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخميس -->
+            <div class="day-section">
+                <h3 class="day-title"><i class="fa-solid fa-calendar-day"></i> الخميس ١٦ يوليو: العقد ومقدم الشغل</h3>
+                <div class="task-list">
+                    <div class="task-card" data-task-id="t9">
+                        <div class="task-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-info">
+                            <div class="task-name">توقيع العقد واستلام الـ 50% مقدم</div>
+                            <div class="task-desc">توقيع العقد قانونياً، استلام الدفعة الأولى، وتسليم تفاصيل البيزنس لـ بانسيه لتشغيل التيم.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-action">
+        <button class="btn-scripts" onclick="toggleDrawer(true)"><i class="fa-solid fa-copy"></i> فتح سكريبتات التواصل السريع</button>
+    </div>
+
+    <!-- Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer(false)"></div>
+    <div class="drawer" id="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title">قوالب رسائل المبيعات السريعة</div>
+            <button class="btn-close" onclick="toggleDrawer(false)"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="script-card">
+            <div class="script-title">1️⃣ رسالة التعارف الدافئة (الجمعة)</div>
+            <div class="script-text" id="s1">يا هندسة أخبارك إيه؟ بقالنا كتير متكلمناش.. حبيت أباركلك على المشروع الجديد/النجاح الأخير. كنت عاوز أدردش معاك في حاجة سريعة الأسبوع ده، إيه رأيك نتقابل أو نعمل مكالمة سريعة يوم الأحد؟</div>
+            <button class="btn-copy" onclick="copyText('s1')"><i class="fa-solid fa-clone"></i> نسخ النص</button>
+        </div>
+
+        <div class="script-card">
+            <div class="script-title">2️⃣ سكريبت عرض التسويق والـ ROI (الـ Retainer)</div>
+            <div class="script-text" id="s2">يا فندم إحنا بنعمل تراك للحملات العقارية في التجمع، واكتشفنا إن متوسط تكلفة العميل (CPL) لشركتكم ممكن تقل للنص لو غيرنا أسلوب الفيديوهات واستخدمنا تكنيك الـ AI Cinematic اللي بنعمله في Vortex. إحنا بنضمن جودة الليدز ومستعدين نوريكم أرقام وسابقة أعمالنا في ميتينج سريع ١٠ دقائق. إيه اليوم المناسب لحضرتك؟</div>
+            <button class="btn-copy" onclick="copyText('s2')"><i class="fa-solid fa-clone"></i> نسخ النص</button>
+        </div>
+
+        <div class="script-card">
+            <div class="script-title">3️⃣ سكريبت بيع الويب وتطوير المواقع</div>
+            <div class="script-text" id="s3">مساء الخير يا فندم، دخلنا على ويبسايت الشركة ولاحظنا إنه بياخد أكتر من ٥ ثواني عشان يفتح على الموبايل، وده بيخسركم ٤٠٪ من العملاء المهتمين بالعقارات بتاعتكم قبل ما يشوفوا الصور حتى. إحنا في Vortex بنعمل ويبسايتس سريعة ومصممة بتقنية الـ WebGL والجرافيك التفاعلي اللي بيخلي العميل يعيش جوة الكومباوند. تحب نبعتلك كونسيبت أولي لشكل الموقع الجديد؟</div>
+            <button class="btn-copy" onclick="copyText('s3')"><i class="fa-solid fa-clone"></i> نسخ النص</button>
+        </div>
+
+        <div class="script-card">
+            <div class="script-title">4️⃣ سكريبت بيع تصميم أجنحة المعارض (سعيد)</div>
+            <div class="script-text" id="s4">أهلاً بحضرتك يا فندم، المعرض الجاي لشركتكم قرب، والمنافسة هتكون شديدة جداً على لفت انتباه الزوار. إحنا بنصمم أجنحة معارض 3D بروح إبداعية مختلفة تماماً بتضمن إن العميل يقف قدام جناحكم ويدخل يتكلم معاكم. جاهزين نعمل لحضرتك Moodboard وتصميم مبدئي مجاني بالكامل لوقت المعرض. خلينا ندردش في مكالمة سريعة؟</div>
+            <button class="btn-copy" onclick="copyText('s4')"><i class="fa-solid fa-clone"></i> نسخ النص</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">تم النسخ بنجاح! 📋</div>
+
+    <script>
+        // Load states from LocalStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.task-card').forEach(card => {
+                const taskId = card.getAttribute('data-task-id');
+                const checked = localStorage.getItem(taskId) === 'true';
+                if (checked) {
+                    card.classList.add('checked');
+                }
+                
+                // Toggle task on click
+                card.addEventListener('click', () => {
+                    const isChecked = card.classList.toggle('checked');
+                    localStorage.setItem(taskId, isChecked);
+                    updateProgress();
+                });
+            });
+            updateProgress();
+        });
+
+        // Update progress bar
+        function updateProgress() {
+            const total = document.querySelectorAll('.task-card').length;
+            const checked = document.querySelectorAll('.task-card.checked').length;
+            const percentage = total > 0 ? Math.round((checked / total) * 100) : 0;
+            
+            document.getElementById('progress-percent').innerText = percentage + '%';
+            document.getElementById('progress-fill').style.width = percentage + '%';
+        }
+
+        // Toggle Script Drawer
+        function toggleDrawer(open) {
+            document.getElementById('drawer-overlay').classList.toggle('active', open);
+            document.getElementById('drawer').classList.toggle('active', open);
+        }
+
+        // Copy Text Function
+        function copyText(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('active');
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
