@@ -128,56 +128,7 @@
         </div>
     </section>
 
-    <!-- Pinned Memories Section -->
-    <section class="memories-section" style="overflow: hidden;">
-        <div class="container" id="love-diary-container">
-            <div class="diary-header">
-                <span class="section-tag">Behind The Scenes</span>
-                <h2 class="section-title">Our Captured <span>Memories</span></h2>
-                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
-                    Documenting our favorite team outings and beautiful moments at the office and on retreats. ✨
-                </p>
-            </div>
 
-            <!-- Form to Add Memories -->
-            <div class="diary-form" id="main-form">
-                <input type="text" id="placeName" placeholder="What did we do today? (e.g. Red Sea Outing)" required>
-                <button type="button" class="btn-love btn-location" id="getLocationBtn">📍 Pin Our Location</button>
-                <p id="locationStatus" style="font-size: 12px; color: #d6336c; display: none; text-align: center; margin-bottom: 15px; font-weight: 600;">Location pinned perfectly! 🤍</p>
-                <div class="rating-container">
-                    <p>How memorable was this day?</p>
-                    <div class="stars">
-                        <span class="star" data-value="5">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star active" data-value="1">★</span>
-                    </div>
-                </div>
-                <textarea id="dateDetails" rows="3" placeholder="What made this moment special?..." required></textarea>
-                <label for="cameraInput" class="btn-love btn-camera">📸 Choose Photos</label>
-                <input type="file" id="cameraInput" accept="image/*" multiple>
-                <button type="button" class="btn-love btn-audio" id="recordAudioBtn">🎤 Record Voice Note</button>
-                <audio id="audioPreview" controls style="display: none; width: 100%; margin-bottom: 15px;"></audio>
-                <div id="preview-container"></div>
-                <button type="button" class="btn-love" id="addMemoryBtn">💖 Save Our Memory</button>
-            </div>
-
-            <!-- Memories Grid Gallery -->
-            <div class="memories-gallery" id="memoriesGallery"></div>
-        </div>
-    </section>
-
-    <!-- Lightbox Zoom Slider -->
-    <div id="lightbox">
-        <button class="close-lightbox" id="closeLightbox">×</button>
-        <div class="lightbox-controls">
-            <button class="nav-btn" id="prevImage">❮</button>
-            <button class="nav-btn" id="nextImage">❯</button>
-        </div>
-        <img id="lightbox-img" src="" alt="Gallery Image" loading="lazy">
-        <div id="lightbox-counter">1 / 1</div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -225,98 +176,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
-    <script type="module">
-        const dbKey = 'vortex_team_memories_en';
-        const defaultMemories = [
-            { id: 'mem1', placeName: 'Lumin Group Launch Night', location: 'Cairo HQ', details: 'Celebrating the successful launch of Lumin Real Estate compound website after a 48-hour push. Energy was off the charts!', rating: 5, images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'], audio: null, timestamp: Date.now() - 3600000 * 24 * 3 },
-            { id: 'mem2', placeName: 'Aurora Pavilion Brainstorm', location: 'Vortex Design Lab', details: 'Sketching out exhibition concepts and 3D wireframes. Pure creative flow and a lot of coffee.', rating: 5, images: ['https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80'], audio: null, timestamp: Date.now() - 3600000 * 24 * 7 },
-            { id: 'mem3', placeName: 'Red Sea Team Retreat', location: 'Dahab, Sinai', details: "Catching inspirations by the sea, windsurfing, and planning Vortex's next big moves under the stars.", rating: 5, images: ['https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=600&q=80'], audio: null, timestamp: Date.now() - 3600000 * 24 * 15 }
-        ];
 
-        function getMemories() { const data = localStorage.getItem(dbKey); if (!data) { localStorage.setItem(dbKey, JSON.stringify(defaultMemories)); return defaultMemories; } return JSON.parse(data); }
-        function saveMemories(arr) { localStorage.setItem(dbKey, JSON.stringify(arr)); triggerDataReload(); }
-        let dataCallbacks = [];
-        function onValueChange(cb) { dataCallbacks.push(cb); cb(getMemories()); }
-        function triggerDataReload() { const arr = getMemories(); dataCallbacks.forEach(cb => cb(arr)); }
-
-        let currentLocation = "Secret Special Place";
-        let capturedImagesArray = [];
-        let selectedRating = 5;
-        let audioBase64 = null;
-        let mediaRecorder;
-        let audioChunks = [];
-        let editingMemoryId = null;
-
-        const stars = document.querySelectorAll('.star');
-        stars.forEach(star => { star.addEventListener('click', (e) => { selectedRating = parseInt(e.target.dataset.value, 10); stars.forEach(s => { parseInt(s.dataset.value, 10) >= selectedRating ? s.classList.add('active') : s.classList.remove('active'); }); }); });
-
-        onValueChange((memoriesArray) => { const gallery = document.getElementById('memoriesGallery'); gallery.innerHTML = ''; if (memoriesArray.length > 0) { [...memoriesArray].reverse().forEach(memory => renderPolaroid(memory)); } });
-
-        function renderPolaroid(memory) {
-            const images = memory.images || [memory.image];
-            const coverImage = images[0];
-            const rating = memory.rating || 5;
-            const dateObj = new Date(memory.timestamp);
-            const dateString = dateObj.toLocaleDateString('en-GB') + ' • ' + dateObj.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-            const polaroid = document.createElement('div');
-            polaroid.className = 'polaroid';
-            let starsHtml = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-            let photoCountHtml = images.length > 1 ? `<div class="photo-count">+${images.length - 1}</div>` : '';
-            let audioHtml = memory.audio ? `<audio controls src="${memory.audio}"></audio>` : '';
-            polaroid.innerHTML = `<button class="action-btn edit-btn" title="Edit Text">✏️</button><button class="action-btn delete-btn" title="Delete Memory">✕</button><div class="img-container"><img src="${coverImage}" class="cover" alt="Us" loading="lazy">${photoCountHtml}</div><h4>${memory.placeName}</h4><p class="date-time">🕒 ${dateString}</p><div class="display-stars">${starsHtml}</div><p class="location">📍 ${memory.location}</p><p class="review">"${memory.details}"</p>${audioHtml}`;
-            polaroid.querySelector('.delete-btn').addEventListener('click', (e) => { e.stopPropagation(); if(confirm("Are you sure you want to delete this memory? 🥺")) { saveMemories(getMemories().filter(m => m.id !== memory.id)); } });
-            polaroid.querySelector('.edit-btn').addEventListener('click', (e) => { e.stopPropagation(); document.getElementById('placeName').value = memory.placeName; document.getElementById('dateDetails').value = memory.details; editingMemoryId = memory.id; const submitBtn = document.getElementById('addMemoryBtn'); submitBtn.innerHTML = '💾 Update Memory Text'; submitBtn.style.background = '#f5c518'; document.getElementById('main-form').scrollIntoView({ behavior: 'smooth' }); });
-            polaroid.addEventListener('click', (e) => { if (e.target.tagName !== 'AUDIO' && e.target.tagName !== 'BUTTON') { openLightbox(images); } });
-            document.getElementById('memoriesGallery').appendChild(polaroid);
-        }
-
-        let currentLightboxImages = [], currentImageIndex = 0;
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const counter = document.getElementById('lightbox-counter');
-        function openLightbox(imagesArray) { currentLightboxImages = imagesArray; currentImageIndex = 0; updateLightboxView(); lightbox.style.display = 'flex'; }
-        function updateLightboxView() { lightboxImg.src = currentLightboxImages[currentImageIndex]; counter.innerText = `${currentImageIndex + 1} / ${currentLightboxImages.length}`; document.getElementById('prevImage').style.display = currentLightboxImages.length > 1 ? 'flex' : 'none'; document.getElementById('nextImage').style.display = currentLightboxImages.length > 1 ? 'flex' : 'none'; }
-        document.getElementById('nextImage').addEventListener('click', (e) => { e.stopPropagation(); currentImageIndex = (currentImageIndex + 1) % currentLightboxImages.length; updateLightboxView(); });
-        document.getElementById('prevImage').addEventListener('click', (e) => { e.stopPropagation(); currentImageIndex = (currentImageIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length; updateLightboxView(); });
-        document.getElementById('closeLightbox').addEventListener('click', () => lightbox.style.display = 'none');
-        lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
-
-        document.getElementById('getLocationBtn').addEventListener('click', () => { if (navigator.geolocation) { navigator.geolocation.getCurrentPosition((position) => { currentLocation = `Lat: ${position.coords.latitude.toFixed(3)}, Lng: ${position.coords.longitude.toFixed(3)}`; document.getElementById('locationStatus').style.display = 'block'; document.getElementById('getLocationBtn').style.background = '#d6336c'; document.getElementById('getLocationBtn').style.color = '#fff'; document.getElementById('getLocationBtn').innerText = '✅ Location Pinned'; }, () => alert("Couldn't get the location. Make sure GPS is enabled! 🌍")); } });
-
-        function compressImageAsync(file) { return new Promise((resolve) => { const reader = new FileReader(); reader.onload = function(event) { const img = new Image(); img.src = event.target.result; img.onload = () => { const canvas = document.createElement('canvas'); const MAX = 600; let w = img.width, h = img.height; if (w > h) { if (w > MAX) { h *= MAX / w; w = MAX; } } else { if (h > MAX) { w *= MAX / h; h = MAX; } } canvas.width = w; canvas.height = h; canvas.getContext('2d').drawImage(img, 0, 0, w, h); resolve(canvas.toDataURL('image/jpeg', 0.6)); }; }; reader.readAsDataURL(file); }); }
-
-        document.getElementById('cameraInput').addEventListener('change', async function(e) { const files = e.target.files; if (files.length > 0) { const previewContainer = document.getElementById('preview-container'); previewContainer.innerHTML = ''; capturedImagesArray = []; for (let i = 0; i < files.length; i++) { const compressed = await compressImageAsync(files[i]); capturedImagesArray.push(compressed); const imgPreview = document.createElement('img'); imgPreview.src = compressed; imgPreview.className = 'thumb-preview'; previewContainer.appendChild(imgPreview); } } });
-
-        const recordBtn = document.getElementById('recordAudioBtn');
-        const audioPreview = document.getElementById('audioPreview');
-        recordBtn.addEventListener('click', async () => { if (!mediaRecorder || mediaRecorder.state === 'inactive') { try { const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); mediaRecorder = new MediaRecorder(stream); audioChunks = []; mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); }; mediaRecorder.onstop = () => { const audioBlob = new Blob(audioChunks, { type: 'audio/webm' }); const reader = new FileReader(); reader.readAsDataURL(audioBlob); reader.onloadend = () => { audioBase64 = reader.result; audioPreview.src = audioBase64; audioPreview.style.display = 'block'; }; stream.getTracks().forEach(track => track.stop()); }; mediaRecorder.start(); recordBtn.innerText = '🛑 Stop Recording...'; recordBtn.style.background = '#ff4757'; } catch (err) { alert("Please allow microphone access to record memories! 🎤"); } } else { mediaRecorder.stop(); recordBtn.innerText = '🎤 Record Voice Note'; recordBtn.style.background = '#8e44ad'; } });
-
-        document.getElementById('addMemoryBtn').addEventListener('click', () => {
-            const placeName = document.getElementById('placeName').value;
-            const details = document.getElementById('dateDetails').value;
-            const btn = document.getElementById('addMemoryBtn');
-            if (editingMemoryId) {
-                if (!placeName || !details) { alert("Please fill in the text fields to update! ✏️"); return; }
-                btn.innerText = '⏳ Updating...'; btn.disabled = true;
-                const arr = getMemories(); const idx = arr.findIndex(m => m.id === editingMemoryId);
-                if (idx !== -1) { arr[idx].placeName = placeName; arr[idx].details = details; saveMemories(arr); }
-                document.getElementById('placeName').value = ''; document.getElementById('dateDetails').value = '';
-                editingMemoryId = null; btn.innerHTML = '💖 Save Our Memory'; btn.style.background = '#d6336c'; btn.disabled = false;
-                return;
-            }
-            if (!placeName || !details || capturedImagesArray.length === 0) { alert("Please fill in the details and choose at least one photo! 📸"); return; }
-            btn.innerText = '⏳ Saving...'; btn.disabled = true;
-            const newMemory = { id: 'mem_' + Date.now(), placeName, location: currentLocation, details, rating: selectedRating, images: capturedImagesArray, audio: audioBase64, timestamp: Date.now() };
-            const arr = getMemories(); arr.push(newMemory); saveMemories(arr);
-            document.getElementById('placeName').value = ''; document.getElementById('dateDetails').value = '';
-            document.getElementById('cameraInput').value = ''; document.getElementById('preview-container').innerHTML = '';
-            document.getElementById('getLocationBtn').style.background = '#ffb3c6'; document.getElementById('getLocationBtn').style.color = '#4a4a4a'; document.getElementById('getLocationBtn').innerText = '📍 Pin Our Location'; document.getElementById('locationStatus').style.display = 'none';
-            stars.forEach(s => s.classList.remove('active')); document.querySelector('.star[data-value="5"]').classList.add('active'); selectedRating = 5;
-            currentLocation = "Secret Special Place"; capturedImagesArray = [];
-            audioBase64 = null; audioPreview.src = ''; audioPreview.style.display = 'none'; recordBtn.innerText = '🎤 Record Voice Note'; recordBtn.style.background = '#8e44ad';
-            btn.innerText = '💖 Save Our Memory'; btn.disabled = false;
-        });
-    </script>
 
     <script src="main.js"></script>
 </body>

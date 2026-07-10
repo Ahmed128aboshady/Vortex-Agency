@@ -42,73 +42,92 @@
         </div>
     </header>
 
-    <section class="memories-section" style="overflow: hidden;">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-        
-        <div class="container" id="love-diary-container">
-            
-            <div class="diary-header">
-                <span class="section-tag">خلف الكواليس</span>
-                <h2 class="section-title">لحظاتنا <span>التذكارية المشتركة</span></h2>
+    <!-- قسم أعضاء الفريق -->
+    <section class="team-section" style="padding-top: 8rem;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-tag">المبدعون</span>
+                <h1 class="section-title">الفريق الذي يقف خلف <span>كل مشروع</span></h1>
                 <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
-                    ألبوم ذكريات الفريق، اللحظات الرائعة في المكتب، الرحلات والمغامرات المشتركة. ✨
+                    6 متخصصين كبار في التصميم، التسويق، التطوير، والذكاء الاصطناعي — كلٌ منهم لديه سابقة أعمال قوية وشغف بالنتائج.
                 </p>
             </div>
-
-            <!-- Form to Add Memories -->
-            <div class="diary-form" id="main-form">
-                <input type="text" id="placeName" placeholder="ماذا فعلنا اليوم؟ (مثال: رحلة دهب)" required>
-                
-                <button type="button" class="btn-love btn-location" id="getLocationBtn">
-                    📍 تحديد موقعنا الجغرافي
-                </button>
-                <p id="locationStatus" style="font-size: 12px; color: #d6336c; display: none; text-align: center; margin-bottom: 15px; font-weight: 600;">تم تحديد الموقع بنجاح! 🤍</p>
-                
-                <div class="rating-container">
-                    <p>ما مدى روعة هذه اللحظة؟</p>
-                    <div class="stars">
-                        <span class="star" data-value="5">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star active" data-value="1">★</span>
+            <div class="team-grid">
+                <!-- العضو 1 - أحمد أبو شادي -->
+                <a href="https://www.linkedin.com/in/ahmed-yousef-55751023a/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="../img/team/shady.png" alt="أحمد أبو شادي">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
                     </div>
-                </div>
+                    <div class="member-info">
+                        <h3 class="member-name">أحمد أبو شادي</h3>
+                        <div class="member-role">المؤسس والمدير التنفيذي | مدير التسويق</div>
+                    </div>
+                </a>
 
-                <textarea id="dateDetails" rows="3" placeholder="ما الذي جعل هذه الذكرى مميزة؟..." required></textarea>
-                
-                <label for="cameraInput" class="btn-love btn-camera">
-                    📸 اختر صور الذكرى
-                </label>
-                <input type="file" id="cameraInput" accept="image/*" multiple>
-                
-                <button type="button" class="btn-love btn-audio" id="recordAudioBtn">
-                    🎤 سجل تسجيل صوتي (ميكروفون)
-                </button>
-                <audio id="audioPreview" controls style="display: none; width: 100%; margin-bottom: 15px;"></audio>
-                
-                <div id="preview-container"></div>
+                <!-- العضو 2 - أحمد نصر -->
+                <a href="https://www.linkedin.com/in/ahmednasrahmed/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="https://pps.services.adobe.com/api/profile/EE0135F65A7F3E010A495D94@AdobeID/image/ae883226-f186-430e-9d7c-815f601fb2ec/276" alt="أحمد نصر">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">أحمد نصر</h3>
+                        <div class="member-role">شريك مؤسس والمدير الإبداعي | أخصائي فيديو بالذكاء الاصطناعي</div>
+                    </div>
+                </a>
 
-                <button type="button" class="btn-love" id="addMemoryBtn">
-                    💖 احفظ لحظتنا التذكارية
-                </button>
+                <!-- العضو 3 - سعيد علي -->
+                <a href="https://www.linkedin.com/in/saeed-ali10/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="../img/team/saeed.png" alt="سعيد علي">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">سعيد علي</h3>
+                        <div class="member-role">شريك مؤسس ومصمم معارض ثلاثية الأبعاد أول</div>
+                    </div>
+                </a>
+
+                <!-- العضو 4 - يارا خميس -->
+                <a href="https://www.linkedin.com/in/yara-khamis-gharib-894588117/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="../img/team/yara.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Yara+Khamis&background=9b30ff&color=fff&size=500'" alt="يارا خميس">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">يارا خميس</h3>
+                        <div class="member-role">رئيسة مصممي التعبئة والتغليف والهوية البصرية</div>
+                    </div>
+                </a>
+
+                <!-- العضو 5 - بنسيه خميس -->
+                <a href="https://www.linkedin.com/in/panseih-gharib/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="../img/team/bansya.png" onerror="this.src='https://ui-avatars.com/api/?name=Panseih+Khamis&background=9b30ff&color=fff&size=500'" alt="بنسيه خميس">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">بنسيه خميس</h3>
+                        <div class="member-role">مديرة الفريق</div>
+                    </div>
+                </a>
+
+                <!-- العضو 6 - هدير مصطفى -->
+                <a href="https://www.linkedin.com/in/hadeer-moustafa-030271183/" target="_blank" rel="noopener" class="team-member team-member-link">
+                    <div class="member-photo">
+                        <img src="../img/team/hadir.png" onerror="this.src='https://ui-avatars.com/api/?name=Hadeer+Moustafa&background=e91e8c&color=fff&size=500'" alt="هدير مصطفى">
+                        <div class="linkedin-badge"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">هدير مصطفى</h3>
+                        <div class="member-role">مديرة التسويق</div>
+                    </div>
+                </a>
             </div>
-
-            <!-- Memories Grid Gallery -->
-            <div class="memories-gallery" id="memoriesGallery"></div>
         </div>
     </section>
 
-    <!-- Lightbox Zoom Slider -->
-    <div id="lightbox">
-        <button class="close-lightbox" id="closeLightbox">×</button>
-        <div class="lightbox-controls">
-            <button class="nav-btn" id="prevImage">❮</button>
-            <button class="nav-btn" id="nextImage">❯</button>
-        </div>
-        <img id="lightbox-img" src="" alt="Gallery Image" loading="lazy">
-        <div id="lightbox-counter">1 / 1</div>
-    </div>
 
     <!-- Footer -->
 
