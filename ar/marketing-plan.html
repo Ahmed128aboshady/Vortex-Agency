@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الماركتنج والمبيعات | Vortex Creative Studio</title>
+    <meta name="description" content="خطة العمل والخطوات العملية لـ هدير مصطفى (مديرة التسويق) عشان نجيب ليدز لقطة ونقفل عقود مع العملاء من أول التعارف لحد الإمضاء.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .plan-hero {
+            padding-top: 150px;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            padding: 2rem 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--border-glass);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-dark);
+            border: 4px solid var(--accent-magenta);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: var(--transition-fast);
+        }
+        .timeline-item.left {
+            left: 50%;
+        }
+        .timeline-item.right {
+            left: 0;
+        }
+        .timeline-item.left::after {
+            left: -10px;
+            right: auto;
+        }
+        .timeline-item.right::after {
+            right: -10px;
+            left: auto;
+        }
+        .timeline-content {
+            padding: 2rem;
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            position: relative;
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+        }
+        .timeline-content:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-purple);
+        }
+        .timeline-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        body.light-theme .timeline-content {
+            background: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: auto;
+                right: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-right: 70px;
+                padding-left: 25px;
+            }
+            .timeline-item.left {
+                left: 0;
+            }
+            .timeline-item.right {
+                left: 0;
+            }
+            .timeline-item::after {
+                right: 21px;
+                left: auto;
+            }
+            .timeline-item.left::after {
+                right: 21px;
+                left: auto;
+            }
+            .timeline-item.right::after {
+                right: 21px;
+                left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="services.html" class="nav-link">خدماتنا</a>
+                <a href="portfolio.html" class="nav-link">معرض الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="about.html" class="nav-link">الوكالة</a>
+                <a href="brief.html" class="nav-cta">ابدأ مشروعك</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../marketing-plan.html" class="lang-switch">EN</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="plan-hero">
+        <div class="container">
+            <span class="section-tag">خطة الماركتنج والمبيعات</span>
+            <h1 class="section-title">خطة جلب العملاء <span>وتقفيل العقود</span></h1>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                دليل العمل والخطوات العملية المتفصلة لـ زميلتنا "هدير مصطفى" (مديرة التسويق) عشان نعرف نجيب ليدز لقطة لشركات العقارات والبراندات الفاخرة، ونقفل معاهم عقود صح من أول سلام لحد الإمضاء!
+            </p>
+        </div>
+    </section>
+
+    <!-- قنوات جلب العملاء -->
+    <section style="padding-bottom: 6rem;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-tag">الجزء الأول</span>
+                <h2 class="section-title">قنوات جلب العملاء <span>(الليدز)</span></h2>
+            </div>
+            
+            <div class="strategy-grid">
+                <!-- قنوات 1 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="pillar-title">بورتفوليو الموقع الإلكتروني</h3>
+                    <p class="pillar-desc">
+                        البورتفوليو جاهز بالفعل ومعروض على الموقع بتاعنا، وفيه مشاريع البراندينج وتصميم المعارض بشكل دراسات حالة (Case Studies) قوية، توري العميل إحنا بنفكر إزاي وبنطلع شغل فاخر شكله إيه عشان نثبت قوتنا.
+                    </p>
+                </div>
+
+                <!-- قنوات 2 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="pillar-title">فيديوهات الذكاء الاصطناعي والموشن</h3>
+                    <p class="pillar-desc">
+                        أحمد نصر هيعمل فيديوهات قصيرة (Reels) تخطف العين وتوري إمكانياتنا في الذكاء الاصطناعي، دي أحسن حاجة بتجيب مشاهدات وتسمّع وتجيب تفاعل لاسم الوكالة بسرعة البرق.
+                    </p>
+                </div>
+
+                <!-- قنوات 3 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <h3 class="pillar-title">صيد العملاء على LinkedIn</h3>
+                    <p class="pillar-desc">
+                        هدير وأحمد أبو شادي هيبعتوا رسايل شخصية ومباشرة لمديرين التسويق في شركات التطوير العقاري الكبيرة والبراندات الفاخرة، رسايل ذكية متفصلة مش كوبي بيست.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- جدول خطوات العمل مع العميل -->
+    <section style="padding-bottom: 8rem; background: rgba(7, 7, 9, 0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">الجزء الثاني</span>
+                <h2 class="section-title">رحلة العميل <span>لحد توقيع العقد</span></h2>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                    الخطوات اللي بنمشيها مع أي عميل يجيلنا بالترتيب:
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 01</div>
+                        <h3>فلترة وتصنيف الليدز</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            بنشوف الليدز اللي جاتلنا من فورم الموقع ونقيم ميزانيتها ووقتها وهل الشغل يناسب تخصصاتنا ولا لأ قبل ما نكلمهم.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 02</div>
+                        <h3>مكالمة الاكتشاف (15 دقيقة)</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            مكالمة سريعة مع العميل عشان نفهم دماغه وعاوز يوصل لإيه بالظبط ونحدد طلباته بشكل دقيق ومريح.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 03</div>
+                        <h3>البروبوزال والـ Moodboard</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            بنقعد مع أحمد نصر (المدير الإبداعي) ونحضر بريزنتيشن قوي فيها الفكرة الإبداعية المقترحة والتكلفة المالية بالتفصيل.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 04</div>
+                        <h3>التفاوض وتظبيط البنود</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            بنتناقش مع العميل في تفاصيل الأسعار وعدد التعديلات المسموحة لحد ما نوصل لاتفاق يرضي الكل ويظبط ميزانية المشروع.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 05</div>
+                        <h3>كتابة العقد والدفعة الأولى</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            بنكتب العقد ونمضيه. شروط الدفع المعتادة: 50% مقدم لبدء الشغل، 30% بعد اعتماد البروفات الأولى، و20% قبل تسليم الملفات النهائية.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">الخطوة 06</div>
+                        <h3>تسليم الشغل لبانسيه</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            بنسلم العميل وتفاصيل المشروع رسمياً لـ بانسيه (مديرة الفريق) عشان تبدأ تقسم المهام وتتابع التيم والـ Deadlines في الوقت المطلوب.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">نصنع المستقبل الرقمي والبصري لأفضل العلامات التجارية والمشروعات الفاخرة في الوطن العربي.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">صفحاتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="portfolio.html">معرض الأعمال</a></li>
+                        <li><a href="about.html">الوكالة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>التجمع الخامس، القاهرة، مصر</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

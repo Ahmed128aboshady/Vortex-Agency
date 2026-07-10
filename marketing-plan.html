@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing &amp; Sales Strategy | Vortex Creative Studio</title>
+    <meta name="description" content="The tactical roadmap for Hadeer Mustafa (Marketing Manager) to drive high-end B2B leads and navigate client conversions from acquisition to contract.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .plan-hero {
+            padding-top: 150px;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            padding: 2rem 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--border-glass);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-dark);
+            border: 4px solid var(--accent-magenta);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: var(--transition-fast);
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item.right::after {
+            left: -10px;
+        }
+        .timeline-content {
+            padding: 2rem;
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            position: relative;
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+        }
+        .timeline-content:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-purple);
+        }
+        .timeline-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        body.light-theme .timeline-content {
+            background: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item.left {
+                left: 0;
+            }
+            .timeline-item.right {
+                left: 0;
+            }
+            .timeline-item::after {
+                left: 21px;
+                right: auto;
+            }
+            .timeline-item.right::after {
+                left: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="about.html" class="nav-link">Agency</a>
+                <a href="brief.html" class="nav-cta">Start Project</a>
+            </nav>
+            <div class="header-actions">
+                <a href="ar/marketing-plan.html" class="lang-switch">AR</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="plan-hero">
+        <div class="container">
+            <span class="section-tag">Marketing &amp; Sales Strategy</span>
+            <h1 class="section-title">Client Acquisition <span>Roadmap</span></h1>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                An actionable tactical playbook designed for Hadeer Mustafa (Marketing Manager) to generate high-end B2B leads and manage the client onboarding journey to successful contract closures.
+            </p>
+        </div>
+    </section>
+
+    <!-- Strategy Pillars -->
+    <section style="padding-bottom: 6rem;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-tag">Part 1</span>
+                <h2 class="section-title">Lead Generation <span>Channels</span></h2>
+            </div>
+            
+            <div class="strategy-grid">
+                <!-- Pillar 1 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="pillar-title">Website Portfolio</h3>
+                    <p class="pillar-desc">
+                        Our portfolio is already live on our website, showcasing detailed design case studies for branding, packaging, and exhibition design to demonstrate our visual systems and strategic results.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="pillar-title">AI Media &amp; Reels</h3>
+                    <p class="pillar-desc">
+                        Creating short, viral visual hooks demonstrating AI video generation and premium motion design capabilities. Spearheaded by Ahmed Nasr to showcase our state-of-the-art tech.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <h3 class="pillar-title">B2B LinkedIn Outreach</h3>
+                    <p class="pillar-desc">
+                        Direct outreach targeting Real Estate Marketing Directors and Luxury Brand Founders. Sending highly personalized value propositions based on their current visual pain points.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Journey Timeline -->
+    <section style="padding-bottom: 8rem; background: rgba(7, 7, 9, 0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">Part 2</span>
+                <h2 class="section-title">The Client <span>Journey</span></h2>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                    The step-by-step pipeline from first contact to signed contract.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 01</div>
+                        <h3>Lead Qualification</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            Filter incoming requests from our brief form. Evaluate budget fit, timeline alignment, and scope complexity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 02</div>
+                        <h3>Discovery Call</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            A 15-minute alignment call with the client to understand goals, pain points, and detail project requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 03</div>
+                        <h3>Proposal &amp; Moodboard</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            A internal sync with Ahmed Nasr (Creative Director) to draft a creative concept pitch deck containing scope, deliverables, and financial terms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 04</div>
+                        <h3>Negotiation</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            Aligning details, revisions limits, and scope tweaks with the client to achieve mutual terms agreement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 05</div>
+                        <h3>Contracting &amp; Payment</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            Signing the official agreement. Standard terms: 50% deposit, 30% on initial reviews, 20% on final files delivery.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-number">Step 06</div>
+                        <h3>Handover to Operations</h3>
+                        <p class="pillar-desc" style="margin-bottom: 0;">
+                            Officially introducing the client to Panseih (Team Manager) to initiate timeline tracking and design tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">Shaping the digital and visual future of luxury brands and market leaders in the Middle East.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">Agency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>New Cairo, Egypt</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

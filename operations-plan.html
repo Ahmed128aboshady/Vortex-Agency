@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Operations &amp; Policies | Vortex Creative Studio</title>
+    <meta name="description" content="The official operations and policies manual for Panseih Khamis (Team Manager) to organize design departments, track tasks, and manage payroll.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .plan-hero {
+            padding-top: 150px;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .policy-card {
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .policy-card:hover {
+            border-color: var(--accent-magenta);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-magenta);
+        }
+        .policy-icon {
+            font-size: 2rem;
+            color: var(--accent-magenta);
+            margin-bottom: 1.5rem;
+        }
+        body.light-theme .policy-card {
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-magenta"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-vortex"></div>
+                    <div class="logo-dot"></div>
+                </div>
+                VORTEX
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="about.html" class="nav-link">Agency</a>
+                <a href="brief.html" class="nav-cta">Start Project</a>
+            </nav>
+            <div class="header-actions">
+                <a href="ar/operations-plan.html" class="lang-switch">AR</a>
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="plan-hero">
+        <div class="container">
+            <span class="section-tag">Internal Operations Manual</span>
+            <h1 class="section-title">Operations &amp; <span>Team Policies</span></h1>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                A comprehensive operational roadmap designed for Panseih Khamis (Team Manager) to structure internal departments, manage workflow pipelines, enforce team rules, and coordinate payroll schedules.
+            </p>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section style="padding-bottom: 6rem;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-tag">Section 1</span>
+                <h2 class="section-title">Agency <span>Departments</span></h2>
+                <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Structure of roles and design domains across the agency.</p>
+            </div>
+
+            <div class="dept-grid">
+                <!-- Dept 1 -->
+                <div class="policy-card">
+                    <div class="policy-icon"><i class="fa-solid fa-crown"></i></div>
+                    <h3>Marketing</h3>
+                    <p class="pillar-desc" style="margin-top: 1rem;">
+                        <strong>Lead:</strong> Hadeer Mustafa<br>
+                        Focuses on B2B sales, public relations with major brands, generating new clients, and general financial tracking of the company.
+                    </p>
+                </div>
+
+                <!-- Dept 2 -->
+                <div class="policy-card">
+                    <div class="policy-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Creative &amp; AI Media</h3>
+                    <p class="pillar-desc" style="margin-top: 1rem;">
+                        <strong>Lead:</strong> Ahmed Nasr<br>
+                        Responsible for design quality sign-off on social media designs before any delivery, directing creative projects, and producing custom AI and motion video content.
+                    </p>
+                </div>
+
+                <!-- Dept 3 -->
+                <div class="policy-card">
+                    <div class="policy-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h3>3D &amp; Space Design</h3>
+                    <p class="pillar-desc" style="margin-top: 1rem;">
+                        <strong>Lead:</strong> Saeed Ali<br>
+                        Designing luxury 3D exhibition booths, physical layout wireframes, retail mockups, and architectural rendering.
+                    </p>
+                </div>
+
+                <!-- Dept 4 -->
+                <div class="policy-card">
+                    <div class="policy-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <h3>Brand &amp; Packaging</h3>
+                    <p class="pillar-desc" style="margin-top: 1rem;">
+                        <strong>Lead:</strong> Yara Khamis<br>
+                        Crafting brand style guides, logo systems, commercial packaging layouts, and print assets alignment.
+                    </p>
+                </div>
+
+                <!-- Dept 5 -->
+                <div class="policy-card">
+                    <div class="policy-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Operations &amp; PM</h3>
+                    <p class="pillar-desc" style="margin-top: 1rem;">
+                        <strong>Lead:</strong> Panseih Khamis<br>
+                        The operational heart. Manages daily task allocations, coordinates schedules, tracks deadlines, and ensures smooth cross-department collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies & Payroll -->
+    <section style="padding-bottom: 8rem; background: rgba(7, 7, 9, 0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">Section 2</span>
+                <h2 class="section-title">Policies &amp; <span>Compensation</span></h2>
+            </div>
+
+            <div class="strategy-grid">
+                <!-- Card 1 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="pillar-title">Team Rules &amp; Communication</h3>
+                    <p class="pillar-desc">
+                        We operate on a hybrid model focusing on deliverables. Slack is our exclusive communication channel, and task tracking is managed on Odoo Project. Weekly syncs occur every Monday at 4:00 PM to review pipeline tasks. Strict NDA on active work.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <h3 class="pillar-title">Payroll Schedule</h3>
+                    <p class="pillar-desc">
+                        Base salaries are systematically paid out between the 1st and 5th of each calendar month via banking transfers or active wallets as chosen by team members.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3 class="pillar-title">Bonus &amp; Commissions</h3>
+                    <p class="pillar-desc">
+                        Project-based bonuses are awarded for rapid deliveries and zero-error project approvals. Referral commissions are paid to any member who introduces new paying clients to the agency.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-vortex"></div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        VORTEX
+                    </a>
+                    <p class="footer-desc">Shaping the digital and visual future of luxury brands and market leaders in the Middle East.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://behance.net" target="_blank" class="social-icon-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">Agency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+20 100 123 4567</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@vortexstudio.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>New Cairo, Egypt</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Creative Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
